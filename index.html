@@ -5,14 +5,27 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<style>
 			body {font-family:sans-serif;}
+			.gradient {
+				background: rgb(255,255,255); /* Old browsers */
+				background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(153,153,153,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(153,153,153,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(153,153,153,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(153,153,153,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(153,153,153,1) 100%); /* IE10+ */
+				background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(153,153,153,1) 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#999999',GradientType=1 ); /* IE6-9 */
+
+				}
 			a img { border: none; }
 		
 			#logo {
-				background-image: url(/logo.png);
+				background-image: url(logo.png);
 				background-position: -50% 50%;
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: contain;
+				opacity: 0.7;
+
 			}
 
 			#logo {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
@@ -22,7 +35,7 @@
 			#twitter {position:absolute; bottom: 7px; right: 285px;}
 		</style>
 	</head>	
-	<body>
+	<body class="gradient">
 		<div id="logo">&nbsp;</div>
 		
 		<div id="twitter">
