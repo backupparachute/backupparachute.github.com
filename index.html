@@ -3,6 +3,7 @@
 		<title>Backup Parachute Software</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link href="https://raw2.github.com/arnaudleray/pocketgrid/master/pocketgrid.css" media="all" rel="stylesheet" type="text/css" />
 		<style>
 			body {font-family:sans-serif;}
 			.gradient {
@@ -16,7 +17,7 @@
 				}
 			a img { border: none; }
 		
-			#logo {
+/*			#logo {
 				background-image: url(logo.png);
 				background-position: -50% 50%;
 				background-repeat: no-repeat;
@@ -24,19 +25,40 @@
 				background-size: contain;
 				opacity: 0.8;
 
-			}
+			}*/
+			
+			#logo div.text {vertical-align:top;}
+			#logo img {width:144px;}
+			
+			.outline {border: 1px solid red;}
 
-			#logo {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+/*			#logo {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }*/
+			
+			
 			
 			#footer { position:absolute; bottom: 5px; right: 5px; color: #839457; font-size: 0.8em;}
 			#footer img {vertical-align:middle;margin-left:2px;width:32px;height:32px;}
 			#twitter {position:absolute; bottom: 7px; right: 285px;}
+			
 		</style>
 	</head>	
-	<body class="gradient">
-		<div id="logo">&nbsp;</div>
+	<body class="">
 		
-		<a href="https://github.com/backupparachute"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://backupparachute.com/bps-media/fork-me.png" alt="Fork me on GitHub"></a>
+		<header class="block-group">
+			<div id="logo" class="block outline"><img src="logo.png" /> backup parachute software</div>
+		</header>
+		
+		<div id="content" class="block-group outline">
+			
+			<div class="block">
+				vehichaul goes there...
+			</div>
+
+			<div class="block">
+				dog log goes there...
+			</div>
+			
+		</div>
 		
 		<div id="twitter">
 				<a href="https://twitter.com/intent/tweet?screen_name=backupparachute" class="twitter-mention-button">Tweet to @backupparachute</a>
