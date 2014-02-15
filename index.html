@@ -5,6 +5,7 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://raw2.github.com/arnaudleray/pocketgrid/master/pocketgrid.css" media="all" rel="stylesheet" type="text/css" />
 		<style>
+			html, body { margin:0; padding:0;}	
 			body {font-family:sans-serif;}
 			.gradient {
 				background: rgb(255, 255, 255);
@@ -34,7 +35,8 @@
 
 /*			#logo {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }*/
 			
-			
+			#content { padding: 1em; background: aquamarine;}
+			header { padding: 1em; background-color: lightcoral;}
 			
 			#footer { position:absolute; bottom: 5px; right: 5px; color: #839457; font-size: 0.8em;}
 			#footer img {vertical-align:middle;margin-left:2px;width:32px;height:32px;}
@@ -44,17 +46,17 @@
 	</head>	
 	<body class="">
 		
-		<header class="block-group">
+		<header class="block-group outline">
 			<div id="logo" class="block outline"><img src="logo.png" /> backup parachute software</div>
 		</header>
 		
 		<div id="content" class="block-group outline">
 			
-			<div class="block">
+			<div class="block outline">
 				vehichaul goes there...
 			</div>
 
-			<div class="block">
+			<div class="block outline">
 				dog log goes there...
 			</div>
 			
