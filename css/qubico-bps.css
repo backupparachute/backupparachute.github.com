@@ -19,7 +19,7 @@ a:focus,
 .contact-item .icon,
 .contact-item .icon:hover,
 .social-links li:hover a {
-  color:#A2CE7E;
+  color:#839457;
 }
 
 .navbar-brand,
@@ -57,20 +57,20 @@ a:focus,
 .imac-slider .flex-direction-nav .flex-next,
 .pricing .item:hover,
 .pricing .item.featured{
-    background:#A2CE7E;
+    background:#839457;
 }
 
 .process-line {
-    border-top-color:#A2CE7E;
+    border-top-color:#839457;
 }
 
 .team-member:hover .member-details:after {
-    border-left-color:#A2CE7E;
+    border-left-color:#839457;
 }
 
 .team-member.right:hover .member-details:after {
     border-left-color:transparent;
-    border-right-color:#A2CE7E;
+    border-right-color:#839457;
 }
 
 @media (max-width: 767px) {
@@ -79,7 +79,7 @@ a:focus,
     .team-member.right:hover .member-details:after {
         border-right-color:transparent;
         border-left-color:transparent;
-        border-bottom-color:#A2CE7E;
+        border-bottom-color:#839457;
     }
 
     .navbar-brand,
