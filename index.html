@@ -362,58 +362,37 @@
 
 	<!--=== Contact Form ===-->
 
-	<form id="contact-form">
-  <div class="form-group">
-    <label for="">Name</label>
-    <input type="text" class="form-control" placeholder="name">
-	</div>
-	<div class="form-group">
-		<label for="">Phone</label>
-		<input type="text" class="form-control" placeholder="phone">
-	</div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" placeholder="email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Description</label>
-		<textarea class="form-control" name="description" rows="3" placeholder="description"></textarea>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" name="newsletter" id="newsletter"> Add to newsletter
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-	<div id="contact-message"></div>
-</form>
+	<div class="col-sm-12">
 
-	</div>
 
-	<!--
-	<div class="small-12 large-6 columns">
-	<form id="contact-form" class="contact-form" data-abide="ajax">
-		<div class="input-wrapper">
-			<input type='text' name='name' required placeholder='Name' />
-			<small class="error">Your name is required and must be valid.</small>
+		<form id="contact-form">
+	  <div class="form-group">
+	    <label for="">Name</label>
+	    <input type="text" class="form-control" placeholder="name" name="name">
 		</div>
-		<div class="input-wrapper">
-			<input type='text' pattern='phone' name='phone' required placeholder='Phone Number' />
-			<small class="error">Your phone number is required and must be valid.</small>
+		<div class="form-group">
+			<label for="">Phone</label>
+			<input type="text" class="form-control" placeholder="phone" name="phone">
 		</div>
-		<div class="input-wrapper">
-			<input type='text' pattern='email' name='email' required placeholder='Email Address' />
-			<small class="error">Your email address is required and must be valid.</small>
-		</div>
-		<textarea name="description" placeholder='Description (Optional)'></textarea>
-		<input id="newsletter" name="newsletter" type="checkbox" checked><label for="newsletter">Add to newsletter</label>
-
-		<button class="button" type="submit">Let's Talk</button>
-		<span class="contact-message"></span>
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Email</label>
+	    <input type="email" class="form-control" placeholder="email" name="email">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Description</label>
+			<textarea class="form-control" name="description" rows="3" placeholder="description"></textarea>
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" name="newsletter" id="newsletter" checked="true"> Add to newsletter
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+		<div id="contact-message"></div>
 	</form>
-</div>
-</div> -->
+	</div>
 
+	</div>
 
 			</div>
 
