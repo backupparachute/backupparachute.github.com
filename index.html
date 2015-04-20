@@ -387,7 +387,7 @@
 	      <input type="checkbox" name="newsletter" id="newsletter" checked="true"> Add to newsletter
 	    </label>
 	  </div>
-	  <input type="submit" class="btn btn-default">Contact Us</button>
+	  <input type="submit" class="btn btn-default">Contact Us</input>
 		<div id="contact-message"></div>
 	</form>
 	</div>
@@ -447,7 +447,7 @@
 				//and reset the form
 					$("#contact-message").text("Thank you for contacting us...");
 				}).always(function(){
-					$("#contact-form").find('button[type="submit"]').reset();
+					$("#contact-form").find('input[type="submit"]').reset();
 				});
 
 		});
