@@ -73,6 +73,105 @@ a:focus,
     border-right-color:#839457;
 }
 
+.vh-feature {
+    background: url(../assets/vh-feature-bkg.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.vh-feature .container {
+    position: relative;
+}
+
+.app-download-btn {
+    display: inline-block;
+    height: 42px;
+    margin-bottom: 40px;
+}
+
+.app-download-btn + .app-download-btn {
+    margin-left: 20px;
+}
+
+.app-download-btn img {
+    width: auto;
+    height: 100%;
+}
+
+.feature-col {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -6px;
+}
+
+.feature-description {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: -60px;
+}
+
+.feature-description a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.feature-title-bar {
+    width: 100%;
+    background: rgba(131, 149, 84, 0.8);
+    font-size: 24px;
+    text-align: center;
+    position: absolute; bottom: 0;
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    padding: 15px 20px 20px;
+}
+
+
+@media (min-width: 768px) {
+    .vh-feature-hero img {
+        display: inline-block;
+    }
+
+    .feature-description {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+    
+    .app-download-btn {
+        height: 62px;
+    }
+
+    .feature-title-bar {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 992px) {
+    .vh-feature {
+        text-align: right;
+    }
+
+    .vh-feature-hero {
+        padding-left: 60px;
+        padding-right: 30px;
+    }
+
+    .vh-feature-hero img {
+        display: block;
+    }
+
+    .app-download-btn {
+        margin-bottom: 0;
+    }
+}
+
+
 @media (max-width: 767px) {
 
 	.team-member:hover .member-details:after,
