@@ -4,5 +4,11 @@ gems:
 # Outputting
 permalink: pretty
 
+exclude:
+- bower_components
+- bower.json
+- README.md
+
 sass:
-    style: compressed
+  style: compressed
+  sass_dir: /
