@@ -1,0 +1,8 @@
+gems:
+  - jekyll-sitemap
+
+# Outputting
+permalink: pretty
+
+sass:
+    style: compressed
