@@ -1,0 +1,7 @@
+@import 'components/footer/footer-variables';
+
+.l-main {
+  margin: 0 auto;
+  padding: 0 $column-gutter;
+  max-width: $row-width;
+}

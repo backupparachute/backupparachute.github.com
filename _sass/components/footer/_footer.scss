@@ -1,0 +1,20 @@
+@import 'footer-variables';
+
+.site-footer {
+  position: relative;
+  background-color: $olive;
+  padding: $site-footer-padding-top 0;
+  height: $site-footer-height;
+  line-height: 1;
+  color: $olive-black;
+  font-size: $site-footer-font-size;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    background: $olive-dark;
+    width: 100%;
+    height: $site-footer-border-size;
+    content: '';
+  }
+}

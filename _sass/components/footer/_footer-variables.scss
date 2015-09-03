@@ -1,0 +1,4 @@
+$site-footer-padding-top: rem-calc(20);
+$site-footer-font-size: rem-calc(12);
+$site-footer-border-size: rem-calc(20);
+$site-footer-height: ($site-footer-padding-top * 2) + $site-footer-border-size + $site-footer-font-size;

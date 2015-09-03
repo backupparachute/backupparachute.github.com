@@ -1,0 +1,14 @@
+@import '../footer/footer-variables';
+
+.bps-billboard {
+  background: $off-white;
+
+  .billboard {
+    background: transparent url('../images/ripcord-sketch.png') no-repeat right top;
+    background-size: auto 100%;
+  }
+
+  .billboard-msg {
+    max-width: rem-calc(1000);
+  }
+}

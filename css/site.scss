@@ -2,4 +2,18 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-@import "bower_components/foundation/scss/foundation";
+// Foundations
+@import 'bower_components/foundation/scss/foundation/functions';
+@import '_sass/settings'; // BPS Settings & Foundations Overrides
+
+@import 'bower_components/foundation/scss/normalize';
+
+@import 'bower_components/foundation/scss/foundation/components/grid';
+@import 'bower_components/foundation/scss/foundation/components/type';
+@import 'bower_components/foundation/scss/foundation/components/buttons';
+
+// Backup Parachute
+@import '_sass/layout';
+@import '_sass/components/billboards/billboards';
+@import '_sass/components/footer/footer';
+@import '_sass/components/header/header';
