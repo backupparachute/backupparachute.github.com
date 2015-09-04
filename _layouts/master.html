@@ -14,13 +14,16 @@
   </head>
   <body class="bps-billboard">
     {% include svginject.html %}
-    {% include header.html %}
 
-    <main class="l-main">
-      {{ content }}
-    </main>
+    <div class="l-fullview">
+      {% include header.html %}
 
-    {% include footer.html %}
+      <main class="l-main l-fullview-main">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
 
      <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

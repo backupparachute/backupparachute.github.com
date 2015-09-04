@@ -3,10 +3,7 @@
 @import 'bps';
 
 .billboard {
-  display: flex;
-  position: relative;
-  min-height: calc(100vh - #{$site-header-height + $site-footer-height});
-  align-items: center;
+  padding: $site-header-padding-top 0;
 }
 
 .billboard-msg {
