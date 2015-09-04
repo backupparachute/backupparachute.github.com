@@ -1,0 +1,20 @@
+@import 'components/footer/footer-variables';
+
+.l-main {
+  margin: 0 auto;
+  padding: 0 $column-gutter / 2;
+  width: 100%;
+  max-width: $row-width;
+}
+
+.l-fullview {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.l-fullview-main {
+  display: flex;
+  flex: 1 auto;
+  align-items: center;
+}

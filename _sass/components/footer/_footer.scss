@@ -1,0 +1,56 @@
+@import 'footer-variables';
+
+.site-footer {
+  position: relative;
+  background-color: $olive;
+  padding: $site-footer-padding-top 0 ($site-footer-padding-top + $site-footer-border-size);
+  line-height: 1;
+  color: $olive-black;
+  font-size: $site-footer-font-size;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    background: $olive-dark;
+    width: 100%;
+    height: $site-footer-border-size;
+    content: '';
+  }
+
+  .copyright {
+    line-height: rem-calc(36);
+  }
+
+}
+
+.site-footer-link {
+  display: inline-block;
+  vertical-align: middle;
+
+  + .site-footer-link {
+    margin-left: rem-calc(30);
+  }
+
+  &:hover,
+  &:focus {
+    .icon {
+      fill: $white;
+    }
+  }
+}
+
+.icon {
+  width: rem-calc(30);
+  height: rem-calc(30);
+  fill: $olive-black;
+}
+
+.icon-linkedin {
+  width: rem-calc(30);
+  height: rem-calc(24);
+}
+
+.icon-github {
+  width: rem-calc(36);
+  height: rem-calc(36);
+}

@@ -1,0 +1,17 @@
+gems:
+  - jekyll-sitemap
+
+# Outputting
+permalink: pretty
+
+exclude:
+- bower.json
+- README.md
+- node_modules
+- gulpfile.js
+- package.json
+- raw_assets
+
+sass:
+  style: compressed
+  sass_dir: /

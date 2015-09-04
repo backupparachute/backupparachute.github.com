@@ -1,0 +1,27 @@
+@import '../footer/footer-variables';
+@import '../header/header-variables';
+@import 'billboards-variables';
+
+@import 'bps';
+
+.billboard {
+  position: relative;
+  padding-top: $billboard-padding-top * 3;
+  padding-bottom: $billboard-padding-top;
+
+  @media #{$medium-up} {
+    padding-top: $billboard-padding-top;
+  }
+}
+
+.billboard-msg {
+  text-transform: uppercase;
+  line-height: 1;
+  color: $primary-color;
+  font-size: 12vw;
+  font-weight: $font-weight-ultra-bold;
+
+  @media #{$large-up} {
+    font-size: rem-calc(96);
+  }
+}
