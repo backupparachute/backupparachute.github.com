@@ -3,17 +3,20 @@
 @import 'bps';
 
 .billboard {
+  display: flex;
   position: relative;
   min-height: calc(100vh - #{$site-header-height + $site-footer-height});
+  align-items: center;
 }
 
 .billboard-msg {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
   text-transform: uppercase;
   line-height: 1;
   color: $primary-color;
-  font-size: rem-calc(96);
+  font-size: 12vw;
   font-weight: $font-weight-ultra-bold;
+
+  @media #{$large-up} {
+    font-size: rem-calc(96);
+  }
 }
