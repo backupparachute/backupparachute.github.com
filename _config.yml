@@ -5,9 +5,12 @@ gems:
 permalink: pretty
 
 exclude:
-- bower_components
 - bower.json
 - README.md
+- node_modules
+- gulpfile.js
+- package.json
+- raw_assets
 
 sass:
   style: compressed

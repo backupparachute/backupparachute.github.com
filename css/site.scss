@@ -3,14 +3,14 @@
 ---
 
 // Foundations
-@import 'bower_components/foundation/scss/foundation/functions';
+@import 'libs/foundation/scss/foundation/functions';
 @import '_sass/settings'; // BPS Settings & Foundations Overrides
 
-@import 'bower_components/foundation/scss/normalize';
+@import 'libs/foundation/scss/normalize';
 
-@import 'bower_components/foundation/scss/foundation/components/grid';
-@import 'bower_components/foundation/scss/foundation/components/type';
-@import 'bower_components/foundation/scss/foundation/components/buttons';
+@import 'libs/foundation/scss/foundation/components/grid';
+@import 'libs/foundation/scss/foundation/components/type';
+@import 'libs/foundation/scss/foundation/components/buttons';
 
 // Backup Parachute
 @import '_sass/layout';

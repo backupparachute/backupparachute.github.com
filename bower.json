@@ -1,7 +1,7 @@
 {
   "name": "backupparachute.com",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "foundation": "~5.5.0"
   }
 }
