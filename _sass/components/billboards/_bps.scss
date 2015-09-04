@@ -4,24 +4,8 @@
   background: $off-white;
 
   .billboard {
-    background: transparent url('../images/ripcord-sketch.png') no-repeat 85% bottom;
+    background: transparent url('../images/ripcord-sketch-20.png') no-repeat 85% bottom;
     background-size: auto 100%;
-  }
-
-  .billboard-img {
-    display: none;
-    position: absolute;
-    right: $column-gutter / 2;
-    bottom: -$billboard-padding-top;
-    opacity: .25;
-    z-index: -1;
-    height: 60vh;
-
-    img {
-      width: auto;
-      max-width: none;
-      max-height: 100%;
-    }
   }
 
   @media #{$medium-up} {
@@ -29,9 +13,8 @@
       max-width: rem-calc(1000);
     }
 
-    .billboard-img {
-      opacity: 1;
-      height: 80vh;
+    .billboard {
+      background-image: url('../images/ripcord-sketch.png');
     }
   }
 }
