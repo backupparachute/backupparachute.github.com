@@ -2,6 +2,7 @@
   "name": "backupparachute.com",
   "private": true,
   "dependencies": {
-    "foundation": "~5.5.0"
+    "foundation": "~5.5.0",
+    "bourbon": "~4.2.4"
   }
 }

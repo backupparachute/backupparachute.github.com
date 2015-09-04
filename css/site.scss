@@ -2,6 +2,10 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
+// Bourbon
+@import 'libs/bourbon/app/assets/stylesheets/bourbon';
+
+
 // Foundations
 @import 'libs/foundation/scss/foundation/functions';
 @import '_sass/settings'; // BPS Settings & Foundations Overrides
