@@ -1,9 +1,13 @@
 @import '../footer/footer-variables';
 @import '../header/header-variables';
+@import 'billboards-variables';
+
 @import 'bps';
 
 .billboard {
-  padding: $site-header-padding-top 0;
+  position: relative;
+  padding-top: $billboard-padding-top;
+  padding-bottom: $billboard-padding-top;
 }
 
 .billboard-msg {
