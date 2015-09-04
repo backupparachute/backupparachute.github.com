@@ -6,8 +6,12 @@
 
 .billboard {
   position: relative;
-  padding-top: $billboard-padding-top;
+  padding-top: $billboard-padding-top * 3;
   padding-bottom: $billboard-padding-top;
+
+  @media #{$medium-up} {
+    padding-top: $billboard-padding-top;
+  }
 }
 
 .billboard-msg {
