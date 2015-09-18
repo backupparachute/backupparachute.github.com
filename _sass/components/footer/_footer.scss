@@ -21,6 +21,20 @@
     line-height: rem-calc(36);
   }
 
+  .contact {
+    font-weight: $font-weight-bold;
+
+    @media #{$medium-up} {
+      display: inline;
+
+      &:before {
+        padding: 0 rem-calc(5);
+        font-weight: $font-weight-normal;
+        content: '\007C'; // pipe
+      }
+    }
+  }
+
 }
 
 .site-footer-link {
