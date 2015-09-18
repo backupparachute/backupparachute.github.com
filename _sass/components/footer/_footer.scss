@@ -35,6 +35,10 @@
     }
   }
 
+  a[href^=tel] {
+    color: inherit;
+  }
+
 }
 
 .site-footer-link {
