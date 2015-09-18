@@ -21,6 +21,10 @@
   font-size: 12vw;
   font-weight: $font-weight-ultra-bold;
 
+  @media #{$medium-up} {
+    padding-left: rem-calc(30);
+  }
+
   @media #{$large-up} {
     font-size: rem-calc(96);
   }
