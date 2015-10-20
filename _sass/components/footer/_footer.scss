@@ -4,9 +4,28 @@
   position: relative;
   background-color: $olive;
   padding: $site-footer-padding-top 0 ($site-footer-padding-top + $site-footer-border-size);
-  line-height: 1;
   color: $olive-black;
   font-size: $site-footer-font-size;
+
+  section {
+    text-align: center;
+
+    @include direction-context(right-to-left) {
+      &:first-child {
+        @include media($medium-up) {
+          @include span-columns(4);
+          text-align: right;
+        }
+      }
+    }
+
+    &:last-child {
+      @include media($medium-up) {
+        @include span-columns(8);
+        text-align: left;
+      }
+    }
+  }
 
   &:after {
     position: absolute;
@@ -17,22 +36,36 @@
     content: '';
   }
 
-  .copyright {
-    line-height: rem-calc(36);
-  }
+  .icon-link {
+    display: inline-block;
+    vertical-align: middle;
 
-  .contact {
-    font-weight: $font-weight-bold;
+    + .icon-link {
+      margin-left: rem(30);
+    }
 
-    @media #{$medium-up} {
-      display: inline;
-
-      &:before {
-        padding: 0 rem-calc(5);
-        font-weight: $font-weight-normal;
-        content: '\007C'; // pipe
+    &:hover,
+    &:focus {
+      .icon {
+        fill: $white;
       }
     }
+  }
+
+  .icon {
+    width: rem(30);
+    height: rem(30);
+    fill: $olive-black;
+  }
+
+  .icon-linkedin {
+    width: rem(30);
+    height: rem(24);
+  }
+
+  .icon-github {
+    width: rem(36);
+    height: rem(36);
   }
 
   a[href^=tel] {
@@ -41,34 +74,18 @@
 
 }
 
-.site-footer-link {
-  display: inline-block;
-  vertical-align: middle;
+.site-footer-contact {
+  font-weight: $font-weight-bold;
 
-  + .site-footer-link {
-    margin-left: rem-calc(30);
-  }
+  @include media($small-up) {
+    display: inline;
+    line-height: rem(36);
 
-  &:hover,
-  &:focus {
-    .icon {
-      fill: $white;
+    &:before {
+      padding: 0 rem(5);
+      font-weight: $font-weight-normal;
+      content: '\007C'; // pipe
     }
   }
-}
 
-.icon {
-  width: rem-calc(30);
-  height: rem-calc(30);
-  fill: $olive-black;
-}
-
-.icon-linkedin {
-  width: rem-calc(30);
-  height: rem-calc(24);
-}
-
-.icon-github {
-  width: rem-calc(36);
-  height: rem-calc(36);
 }

@@ -12,18 +12,11 @@
     <link rel="stylesheet" href="{{ site.url }}/css/site.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,500,900' rel='stylesheet' type='text/css'>
   </head>
-  <body class="bps-billboard">
+  <body>
     {% include svginject.html %}
+    {% include header.html %}
+    {% include footer.html %}
 
-    <div class="l-fullview">
-      {% include header.html %}
-
-      <main class="l-main l-fullview-main billboard">
-        {{ content }}
-      </main>
-
-      {% include footer.html %}
-    </div>
 
      <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

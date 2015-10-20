@@ -1,0 +1,4 @@
+$small-up: new-breakpoint(min-width em(640));
+$medium-up: new-breakpoint(min-width em(768));
+$large-up: new-breakpoint(min-width em(1024));
+$extra-large-up: new-breakpoint(min-width em(1400));

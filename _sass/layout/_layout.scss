@@ -1,0 +1,24 @@
+@import '../components/footer/footer-variables';
+
+.container {
+  @include container;
+}
+//
+// .l-main {
+//   margin: 0 auto;
+//   padding: 0 $gutter / 2;
+//   width: 100%;
+//   max-width: $max-width;
+// }
+//
+// .l-fullview {
+//   @include display(flex);
+//   @include flex-direction(column);
+//   min-height: 100vh;
+// }
+//
+// .l-fullview-main {
+//   @include display(flex);
+//   @include align-items(center);
+//   @include flex(1 auto);
+// }

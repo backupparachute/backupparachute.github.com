@@ -1,0 +1,8 @@
+@mixin container($gutter: $gutter) {
+  @include outer-container;
+
+  @if $gutter {
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+}

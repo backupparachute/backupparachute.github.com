@@ -9,7 +9,7 @@
   padding-top: $billboard-padding-top * 3;
   padding-bottom: $billboard-padding-top;
 
-  @media #{$medium-up} {
+  @include media($medium-up) {
     padding-top: $billboard-padding-top;
   }
 }
@@ -21,11 +21,11 @@
   font-size: 12vw;
   font-weight: $font-weight-ultra-bold;
 
-  @media #{$medium-up} {
-    padding-left: rem-calc(30);
+  @include media($medium-up) {
+    padding-left: rem(30);
   }
 
-  @media #{$large-up} {
-    font-size: rem-calc(96);
+  @include media($large-up) {
+    font-size: rem(96);
   }
 }
