@@ -2,13 +2,13 @@
 
 .site-header {
   @include container;
-  padding-top: $gutter;
+  padding-top: $site-header-padding-top;
 }
 
 .site-logo {
-  width: $site-logo-width * .75;
+  width: $site-logo-width-default;
   max-width: 100%;
-  height: $site-logo-height * .75;
+  height: $site-logo-height-default;
 
   @include media($medium-up) {
     width: $site-logo-width;

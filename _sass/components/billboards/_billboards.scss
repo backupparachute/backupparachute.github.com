@@ -2,15 +2,24 @@
 @import '../header/header-variables';
 @import 'billboards-variables';
 
-@import 'bps';
+@import 'bps-billboard';
 
 .billboard {
-  position: relative;
-  padding-top: $billboard-padding-top * 3;
-  padding-bottom: $billboard-padding-top;
+  padding-top: $billboard-padding-top-default;
+  padding-bottom: $billboard-padding-top-default;
+  min-height: calc(100vh - #{$site-header-height-default} - #{$site-footer-height-default});
+
+  @include media($small-up) {
+    min-height: calc(100vh - #{$site-header-height-default} - #{$site-footer-height-small});
+  }
 
   @include media($medium-up) {
     padding-top: $billboard-padding-top;
+    min-height: calc(100vh - #{$site-header-height-medium} - #{$site-footer-height-medium});
+  }
+
+  > section {
+    @include container;
   }
 }
 
@@ -22,7 +31,7 @@
   font-weight: $font-weight-ultra-bold;
 
   @include media($medium-up) {
-    padding-left: rem(30);
+    padding-left: rem(60);
   }
 
   @include media($large-up) {
