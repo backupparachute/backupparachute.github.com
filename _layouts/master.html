@@ -10,12 +10,25 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ site.url }}/css/site.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,500,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700,500,900' rel='stylesheet' type='text/css'>
   </head>
   <body {%if page.pageClass %}class={{page.pageClass}}{% endif %}>
     {% include svginject.html %}
-    {% include header.html %}
-    {{content}}
+    <header class="site-header">
+      <div class="site-header-left">
+        {%if page.header == 'billboard' %}
+          <div class="site-logo billboard-logo"><svg><use xlink:href="#site_logo"></use></svg></div>
+        {% else %}
+          <div class="site-logo"><svg><use xlink:href="#ripcord"></use></svg></div>
+          <h2 class="site-title">{{page.title}}</h2>
+        {% endif %}
+      </div>
+      {% include nav.html %}
+    </header>
+
+    <main>
+      {{content}}
+    </main>
     {% include footer.html %}
 
 

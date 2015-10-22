@@ -1,8 +1,10 @@
 $site-header-padding-top: $gutter;
-$site-logo-width: rem(288);
+$site-logo-width: rem(76);
 $site-logo-height: rem(82);
 $site-logo-width-default: $site-logo-width * .75;
 $site-logo-height-default: $site-logo-height * .75;
+$site-logo-billboard-width: rem(288);
+$site-logo-billboard-width-default: $site-logo-billboard-width * .75;
 
 $site-header-height-default: $site-logo-height-default + $site-header-padding-top;
 $site-header-height-medium: $site-logo-height + $site-header-padding-top;

@@ -3,12 +3,36 @@
 .site-header {
   @include container;
   padding-top: $site-header-padding-top;
+
+  nav {
+    @include span-columns(6);
+    text-align: right;
+
+    a {
+      line-height: $site-logo-height-default;
+
+      @include media($medium-up) {
+        line-height: $site-logo-height;
+      }
+    }
+  }
 }
+
+.site-header-left {
+  @include span-columns(6);
+}
+
+.site-logo,
+.site-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 .site-logo {
   width: $site-logo-width-default;
-  max-width: 100%;
   height: $site-logo-height-default;
+  max-width: 100%;
 
   @include media($medium-up) {
     width: $site-logo-width;
@@ -16,8 +40,25 @@
   }
 
   svg {
+    fill: $primary-color;
     width: 100%;
     height: 100%;
-    fill: $primary-color;
   }
+
+  &.billboard-logo {
+    width: $site-logo-billboard-width-default;
+
+    @include media($medium-up) {
+      width: $site-logo-billboard-width;
+    }
+  }
+}
+
+.site-title {
+  margin-left: $gutter / 2;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: $font-weight-light;
+  font-size: rem(24);
+  color: $bps-green;
 }
