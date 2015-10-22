@@ -1,0 +1,19 @@
+html.flexboxtweener,
+.flexboxtweener > body {
+  height: 100%;
+}
+
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+main {
+  @include flex(1 0 auto);
+  padding-top: $gutter * 2;
+}
+
+.container {
+  @include container;
+}

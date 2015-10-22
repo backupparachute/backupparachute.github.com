@@ -2,22 +2,26 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-// Bourbon
+@import 'libs/normalize-scss/normalize';
+
+// Bourbon & Neat
 @import 'libs/bourbon/app/assets/stylesheets/bourbon';
-
-
-// Foundations
-@import 'libs/foundation/scss/foundation/functions';
-@import '_sass/settings'; // BPS Settings & Foundations Overrides
-
-@import 'libs/foundation/scss/normalize';
-
-@import 'libs/foundation/scss/foundation/components/grid';
-@import 'libs/foundation/scss/foundation/components/type';
-@import 'libs/foundation/scss/foundation/components/buttons';
+@import 'libs/neat/app/assets/stylesheets/neat';
+@import '_sass/neat-settings';
 
 // Backup Parachute
-@import '_sass/layout';
+// ==========================================
+
+// Globals
+@import '_sass/globals/globals';
+
+// Layout
+@import '_sass/layout/layout';
+
+// Components
 @import '_sass/components/billboards/billboards';
 @import '_sass/components/footer/footer';
+@import '_sass/components/grid-list/grid-list';
 @import '_sass/components/header/header';
+@import '_sass/components/nav/nav';
+@import '_sass/components/products/products';

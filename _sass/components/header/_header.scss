@@ -1,13 +1,44 @@
 @import 'header-variables';
 
 .site-header {
+  @include container;
   padding-top: $site-header-padding-top;
+  width: 100%;
+
+  nav {
+    @include span-columns(6);
+    text-align: right;
+
+    a {
+      line-height: $site-logo-height-default;
+
+      @include media($medium-up) {
+        line-height: $site-logo-height;
+      }
+    }
+  }
 }
 
+.site-header-left {
+  @include span-columns(6);
+}
+
+.site-logo,
+.site-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 .site-logo {
-  width: $site-logo-width * .75;
+  width: $site-logo-width-default;
   max-width: 100%;
-  height: $site-logo-height * .75;
+  height: $site-logo-height-default;
+
+  @include media($medium-up) {
+    width: $site-logo-width;
+    height: $site-logo-height;
+  }
 
   svg {
     width: 100%;
@@ -15,9 +46,25 @@
     fill: $primary-color;
   }
 
-  @media #{$medium-up}{
-    width: $site-logo-width;
-    height: $site-logo-height;
-  }
+  &.billboard-logo {
+    width: $site-logo-billboard-width-default;
 
+    @include media($medium-up) {
+      width: $site-logo-billboard-width;
+    }
+  }
+}
+
+.site-title {
+  display: none;
+  margin-left: $gutter / 2;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: $bps-green;
+  font-weight: $font-weight-light;
+  font-size: $font-size-extra-large;
+
+  @include media($medium-up) {
+    display: inline-block;
+  }
 }

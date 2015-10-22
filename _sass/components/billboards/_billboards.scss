@@ -2,15 +2,22 @@
 @import '../header/header-variables';
 @import 'billboards-variables';
 
-@import 'bps';
+@import 'bps-billboard';
 
 .billboard {
-  position: relative;
-  padding-top: $billboard-padding-top * 3;
-  padding-bottom: $billboard-padding-top;
+  @include display(flex);
+  @include align-items(center);
+  padding-top: $billboard-padding-top-default;
+  padding-bottom: $billboard-padding-top-default;
+  width: 100%;
 
-  @media #{$medium-up} {
+  @include media($medium-up) {
     padding-top: $billboard-padding-top;
+  }
+
+  > section {
+    @include container;
+    width: 100%;
   }
 }
 
@@ -21,11 +28,11 @@
   font-size: 12vw;
   font-weight: $font-weight-ultra-bold;
 
-  @media #{$medium-up} {
-    padding-left: rem-calc(30);
+  @include media($medium-up) {
+    padding-left: rem(60);
   }
 
-  @media #{$large-up} {
-    font-size: rem-calc(96);
+  @include media($large-up) {
+    font-size: rem(96);
   }
 }
