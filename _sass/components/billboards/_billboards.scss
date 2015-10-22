@@ -5,25 +5,19 @@
 @import 'bps-billboard';
 
 .billboard {
-  display: table;
+  @include display(flex);
+  @include align-items(center);
   padding-top: $billboard-padding-top-default;
   padding-bottom: $billboard-padding-top-default;
   width: 100%;
-  height: calc(100vh - #{$site-header-height-default} - #{$site-footer-height-default});
-
-  @include media($small-up) {
-    height: calc(100vh - #{$site-header-height-default} - #{$site-footer-height-small});
-  }
 
   @include media($medium-up) {
     padding-top: $billboard-padding-top;
-    height: calc(100vh - #{$site-header-height-medium} - #{$site-footer-height-medium});
   }
 
   > section {
     @include container;
-    display: table-cell;
-    vertical-align: middle;
+    width: 100%;
   }
 }
 

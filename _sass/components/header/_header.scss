@@ -3,6 +3,7 @@
 .site-header {
   @include container;
   padding-top: $site-header-padding-top;
+  width: 100%;
 
   nav {
     @include span-columns(6);
