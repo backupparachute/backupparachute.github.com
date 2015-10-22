@@ -24,6 +24,10 @@ gulp.task('svgstore', function() {
         .pipe(gulp.dest('_includes'));
 });
 
+gulp.task('svgmin', function(){
+  return gulp.src('images/*.svg').pipe(svgmin()).pipe(gulp.dest('images'));
+})
+
 gulp.task('imagemin', function() {
   return gulp.src('raw_assets/*.png')
           .pipe(imagemin({

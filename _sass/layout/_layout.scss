@@ -3,6 +3,11 @@
 .container {
   @include container;
 }
+
+main {
+  padding-top: $gutter * 2;
+}
+
 //
 // .l-main {
 //   margin: 0 auto;

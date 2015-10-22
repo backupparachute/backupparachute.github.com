@@ -14,21 +14,23 @@
   </head>
   <body {%if page.pageClass %}class={{page.pageClass}}{% endif %}>
     {% include svginject.html %}
+
     <header class="site-header">
       <div class="site-header-left">
-        {%if page.header == 'billboard' %}
-          <div class="site-logo billboard-logo"><svg><use xlink:href="#site_logo"></use></svg></div>
+        {%if page.pageType == 'billboard' %}
+          <a class="site-logo billboard-logo" href="/"><svg><use xlink:href="#site_logo"></use></svg></a>
         {% else %}
-          <div class="site-logo"><svg><use xlink:href="#ripcord"></use></svg></div>
+          <a class="site-logo" href="/"><svg><use xlink:href="#ripcord"></use></svg></a>
           <h2 class="site-title">{{page.title}}</h2>
         {% endif %}
       </div>
       {% include nav.html %}
     </header>
 
-    <main>
+    <main {%if page.pageType == 'billboard' %}class="billboard"{% endif %}>
       {{content}}
     </main>
+
     {% include footer.html %}
 
 

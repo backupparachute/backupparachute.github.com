@@ -31,8 +31,8 @@
 
 .site-logo {
   width: $site-logo-width-default;
-  height: $site-logo-height-default;
   max-width: 100%;
+  height: $site-logo-height-default;
 
   @include media($medium-up) {
     width: $site-logo-width;
@@ -40,9 +40,9 @@
   }
 
   svg {
-    fill: $primary-color;
     width: 100%;
     height: 100%;
+    fill: $primary-color;
   }
 
   &.billboard-logo {
@@ -55,10 +55,15 @@
 }
 
 .site-title {
+  display: none;
   margin-left: $gutter / 2;
   text-transform: uppercase;
   letter-spacing: .06em;
-  font-weight: $font-weight-light;
-  font-size: rem(24);
   color: $bps-green;
+  font-weight: $font-weight-light;
+  font-size: $font-size-extra-large;
+
+  @include media($medium-up) {
+    display: inline-block;
+  }
 }
