@@ -4,18 +4,9 @@
   position: relative;
   background-color: $olive;
   padding: $site-footer-padding-top 0 ($site-footer-padding-top + $site-footer-border-size);
-  //height: $site-footer-height-default;
   color: $olive-black;
   font-size: $site-footer-font-size;
-
-  // @include media($small-up) {
-  //   height: $site-footer-height-small;
-  // }
-  //
-  // @include media($medium-up) {
-  //   height: $site-footer-height-medium;
-  // }
-
+  letter-spacing: .06em;
 
   section {
     text-align: center;

@@ -1,6 +1,6 @@
 $site-footer-padding-top: rem(10);
 $site-footer-font-size: $font-size-small;
-$site-footer-border-size: rem(20);
+$site-footer-border-size: rem(10);
 $site-footer-icon-link-height-largest: rem(36);
 $site-footer-height-base: ($site-footer-padding-top * 2) + $site-footer-border-size;
 $site-footer-height-default: $site-footer-height-base + (($site-footer-font-size * $default-line-height) * 2) + $site-footer-icon-link-height-largest;
