@@ -25,9 +25,9 @@
     {% endif %}
 
     {% if page.image %}
-      <meta property="og:image" content="/images/{{ page.image }}">
+      <meta property="og:image" content="{{ site.url }}/images/{{ page.image }}">
     {% else %}
-      <meta property="og:image" content="/images/bps-logo-seed-green-tilted.png">
+      <meta property="og:image" content="{{ site.url }}/images/bps-logo-seed-green-tilted.png">
     {% endif %}
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
