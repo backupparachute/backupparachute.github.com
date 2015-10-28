@@ -1,20 +1,28 @@
 .product-link {
   display: block;
-  padding: $gutter $gutter $gutter * 3;
+  padding: $gutter $gutter $gutter * 2;
   text-align: center;
   text-decoration: none;
 
-  &:hover {
+  @include media($medium-up) {
+    padding-bottom: rem(175);
+  }
+
+  @include media($large-up) {
+    padding-bottom: rem(125);
+  }
+
+  &:hover,
+  &:focus {
     background-color: $off-white;
   }
 }
 
 .product-teaser {
   margin: 0 auto;
-  height: 0;
   color: $gray-light;
 
-  @include media($large-up) {
-    max-width: 75%;
+  @include media($medium-up) {
+    height: 0;
   }
 }

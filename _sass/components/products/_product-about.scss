@@ -1,8 +1,16 @@
 .product-about {
-  margin: 0 auto $gutter * 3;
-  max-width: rem(750);
+  margin: 0 auto $gutter;
+  max-width: rem(800);
   text-align: center;
   line-height: $line-height-large;
   font-size: $font-size-large;
+  font-weight: $font-weight-light;
+}
+
+.product-cta {
+  margin: 0 auto $gutter * 3;
+  max-width: rem(800);
+  text-align: center;
+  line-height: $line-height-large;
   font-weight: $font-weight-light;
 }
