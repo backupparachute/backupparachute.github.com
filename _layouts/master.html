@@ -3,9 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}Backup Parachute Software</title>
-    <meta name="description" content="We leverage open source software to craft solutions that empower our clients to reach the next level.">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    {% if page.title %}
+      <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
+    {% else %}
+      <meta property="og:title" content="{{ site.title }}">
+    {% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% if page.description %}
+      <meta property="og:description" content="{{ page.description }}">
+    {% else %}
+      <meta property="og:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+      <meta property="og:image" content="/images/{{ page.image }}">
+    {% else %}
+      <meta property="og:image" content="/images/bps-logo-seed-green-tilted.png">
+    {% endif %}
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
