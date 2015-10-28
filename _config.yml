@@ -1,5 +1,6 @@
 title: Backup Parachute Software
 description: We leverage open source software to craft solutions that empower our clients to reach the next level.
+url: http://backupparachute.com
 
 gems:
   - jekyll-sitemap

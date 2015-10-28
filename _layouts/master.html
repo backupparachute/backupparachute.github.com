@@ -16,7 +16,7 @@
     {% endif %}
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | replace:'/index.html','/' | append: site.url | append: site.baseurl}}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
     {% if page.description %}
       <meta property="og:description" content="{{ page.description }}">
@@ -30,6 +30,7 @@
       <meta property="og:image" content="{{ site.url }}/images/bps-logo-green.png">
     {% endif %}
 
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ site.url }}/css/site.css">
