@@ -2,6 +2,7 @@
 @import 'variables/colors';
 @import 'variables/fonts';
 @import 'variables/type';
+@import 'variables/links';
 
 @import 'mixins/container';
 
@@ -21,7 +22,31 @@ h5,
 h6 {
   margin: 0;
   font-size: $default-font-size;
-  font-weight: $default-font-weight;
+  font-weight: $font-weight-normal;
+}
+
+.h1 {
+  font-size: rem(36);
+}
+
+.h2 {
+  font-size: $font-size-extra-large;
+}
+
+.h3 {
+  font-size: $font-size-large;
+}
+
+.h4 {
+  font-size: $default-font-size;
+}
+
+.h5 {
+  font-size: $font-size-small;
+}
+
+.h6 {
+  font-size: $font-size-extra-small;
 }
 
 strong {
@@ -31,4 +56,37 @@ strong {
 img {
   width: auto;
   max-width: 100%;
+}
+
+a {
+  color: $link-color;
+  font-weight: $link-font-weight;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+
+  &:active {
+    color: $link-color-active;
+  }
+}
+
+button {
+  border: 0;
+  background: $bps-green;
+  padding: rem(15) rem(20);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: $expanded-letter-spacing;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background: $bps-green-dark;
+  }
+
+  &:active {
+    background: $bps-green-light;
+  }
 }

@@ -1,6 +1,11 @@
 title: Backup Parachute Software
 description: We leverage open source software to craft solutions that empower our clients to reach the next level.
 url: http://backupparachute.com
+twitter: https://twitter.com/backupparachute
+linkedin: https://www.linkedin.com/company/backup-parachute-software
+github: https://github.com/backupparachute/
+email: info@backupparachute.com
+phone: 888-865-2012
 
 gems:
   - jekyll-sitemap

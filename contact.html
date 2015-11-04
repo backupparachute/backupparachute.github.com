@@ -1,0 +1,26 @@
+---
+layout: master
+title: Contact
+navOrder: 2
+---
+<div class="contact">
+  <section>
+    <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+    <h3 class="h3">Nulla sem sem, sollicitudin <a href="{{site.twitter}}" target="_blank">Twitter</a>, <a href="{{site.linkedin}}" target="_blank">LinkedIn</a> and <a href="{{site.github}}" target="_blank">GitHub</a> accumsan augue ac, dapibus eleifend enim. Duis pellentesque vulputate urna.</h3>
+    <ul class="contact-list">
+      <li><svg class="icon icon-email"><use xlink:href="#email"></use></svg> <a href="mailto://{{site.email}}">{{site.email}}</a></li>
+      <li><svg class="icon icon-phone"><use xlink:href="#phone"></use></svg> {{site.phone}}</li>
+      <li><svg class="icon icon-twitter"><use xlink:href="#twitter"></use></svg> <a href="{{site.twitter}}" target="_blank">@backupparachute</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="FirstName" placeholder="First Name" />
+      <input type="text" name="LastName" placeholder="Last Name" />
+      <input type="text" name="Email" placeholder="Email" />
+      <textarea name="Message" placeholder="Message/Inquiry"></textarea>
+      <button type="submit">Submit</button
+    </form>
+  </section>
+</div>

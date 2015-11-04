@@ -3,7 +3,7 @@ nav {
   a {
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: .06em;
+    letter-spacing: $expanded-letter-spacing;
     color: $bps-green;
     font-size: $font-size-large;
     font-weight: $font-weight-medium;

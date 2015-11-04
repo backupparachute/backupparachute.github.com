@@ -15,6 +15,10 @@
       @include media($medium-up) {
         line-height: $site-logo-height;
       }
+
+      + a {
+        margin-left: $gutter;
+      }
     }
   }
 }
@@ -59,7 +63,7 @@
   display: none;
   margin-left: $gutter / 2;
   text-transform: uppercase;
-  letter-spacing: .06em;
+  letter-spacing: $expanded-letter-spacing;
   color: $bps-green;
   font-weight: $font-weight-light;
   font-size: $font-size-extra-large;

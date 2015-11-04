@@ -1,11 +1,14 @@
+$font-size-extra-small: rem(8);
+$font-size-small: rem(11);
 $default-font-size: rem(14);
 $font-size-large: rem(18);
 $font-size-extra-large: rem(26);
-$font-size-small: rem(11);
-$font-size-extra-small: rem(8);
 
 $default-font-weight: $font-weight-medium;
 $default-font-color: $gray-light;
 
 $default-line-height: 1.4;
 $line-height-large: 2;
+
+$expanded-letter-spacing: .125em;
+$expanded-letter-spacing-small: .06em;

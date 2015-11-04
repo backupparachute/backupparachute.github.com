@@ -4,9 +4,9 @@
   position: relative;
   background-color: $olive;
   padding: $site-footer-padding-top 0 ($site-footer-padding-top + $site-footer-border-size);
+  letter-spacing: $expanded-letter-spacing-small;
   color: $olive-black;
   font-size: $site-footer-font-size;
-  letter-spacing: .06em;
 
   section {
     text-align: center;
