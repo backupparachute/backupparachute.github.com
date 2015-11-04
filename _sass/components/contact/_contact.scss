@@ -15,7 +15,7 @@ $contact-form-input-border-color: rgba($black, .05);
 }
 
 .contact-form {
-  margin: $gutter auto $gutter * 3;
+  margin: $gutter * 2 auto $gutter * 3;
 
   @include media($large-up) {
     margin-top: 0;

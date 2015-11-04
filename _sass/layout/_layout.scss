@@ -3,6 +3,20 @@ html.flexboxtweener,
   height: 100%;
 }
 
+html.no-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  body {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+
 body {
   @include display(flex);
   @include flex-direction(column);

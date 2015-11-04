@@ -1,12 +1,26 @@
-nav {
+.site-nav {
+  display: none;
+
+  @include media($small-up) {
+    display: block;
+
+    .site-logo {
+      display: none;
+    }
+  }
 
   a {
     text-transform: uppercase;
     text-decoration: none;
+    line-height: $site-logo-height-default;
     letter-spacing: $expanded-letter-spacing;
     color: $bps-green;
     font-size: $font-size-large;
     font-weight: $font-weight-medium;
+
+    @include media($medium-up) {
+      line-height: $site-logo-height;
+    }
 
     &:hover,
     &:focus {
@@ -17,5 +31,53 @@ nav {
     &:active {
       color: $bps-green-dark;
     }
+
+    + a {
+      margin-left: $gutter;
+    }
+  }
+
+  &.nav-is-open {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba($white, .98);
+    padding-top: $gutter;
+    height: 100%;
+    text-align: center;
+
+    .site-logo {
+      margin-bottom: $gutter;
+    }
+
+    a {
+      display: block;
+      margin-left: 0;
+      font-size: $font-size-extra-large;
+    }
+  }
+}
+
+.nav-menu-btn {
+  margin-top: rem(10);
+
+  @include media($small-up) {
+    display: none;
+  }
+}
+
+.nav-menu-close-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid $bps-green;
+  padding: $gutter 0;
+  width: 100%;
+
+  @include media($small-up) {
+    display: none;
   }
 }

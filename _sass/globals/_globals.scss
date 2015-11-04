@@ -71,22 +71,3 @@ a {
     color: $link-color-active;
   }
 }
-
-button {
-  border: 0;
-  background: $bps-green;
-  padding: rem(15) rem(20);
-  text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: $expanded-letter-spacing;
-  color: $white;
-
-  &:hover,
-  &:focus {
-    background: $bps-green-dark;
-  }
-
-  &:active {
-    background: $bps-green-light;
-  }
-}

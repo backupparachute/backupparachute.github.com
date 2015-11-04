@@ -4,27 +4,15 @@
   @include container;
   padding-top: $site-header-padding-top;
   width: 100%;
-
-  nav {
-    @include span-columns(6);
-    text-align: right;
-
-    a {
-      line-height: $site-logo-height-default;
-
-      @include media($medium-up) {
-        line-height: $site-logo-height;
-      }
-
-      + a {
-        margin-left: $gutter;
-      }
-    }
-  }
 }
 
-.site-header-left {
+.site-header-left,
+.site-header-right {
   @include span-columns(6);
+}
+
+.site-header-right {
+  text-align: right;
 }
 
 .site-logo,

@@ -1,8 +1,15 @@
-<nav>
-  {% assign pages = site.pages | sort:"navOrder"  %}
-  {% for p in pages %}
-    {% if p.navOrder %}
-      <a href="{{ p.url }}">{{ p.title }}</a>
-    {% endif %}
-  {% endfor %}
-</nav>
+<div class="site-header-right">
+  <button id="navMenuBtn" class="btn btn-ghost nav-menu-btn">Menu</button>
+  <div id="navMenu" class="site-nav">
+    <div class="site-logo"><svg><use xlink:href="#ripcord"></use></svg></div>
+    <nav>
+      {% assign pages = site.pages | sort:"navOrder"  %}
+      {% for p in pages %}
+        {% if p.navOrder %}
+          <a href="{{ p.url }}">{{ p.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    <button id="navMenuCloseBtn" class="btn btn-text nav-menu-close-btn">Close</button>
+  </div>
+</div>
