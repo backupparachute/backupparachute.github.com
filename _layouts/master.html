@@ -74,7 +74,7 @@
     </main>
 
     {% include footer.html %}
-
+    
     <script src="/scripts/modernizr-flexboxtweener.js"></script>
 
     <script>
@@ -98,6 +98,12 @@
         }
       });
     </script>
+
+    {% if page.scripts %}
+      {% for file in page.scripts %}
+      <script src='{{ file }}' type="text/javascript"></script>
+      {% endfor %}
+    {% endif %}
 
      <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

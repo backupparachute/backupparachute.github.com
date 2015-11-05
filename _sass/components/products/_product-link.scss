@@ -3,6 +3,7 @@
   padding: $gutter $gutter $gutter * 2;
   text-align: center;
   text-decoration: none;
+  font-weight: $font-weight-medium;
 
   @include media($medium-up) {
     padding-bottom: rem(175);

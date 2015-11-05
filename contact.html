@@ -2,7 +2,12 @@
 layout: master
 title: Contact
 navOrder: 2
+scripts:
+  - /libs/jquery/dist/jquery.min.js
+  - /libs/jquery-validation/dist/jquery.validate.min.js
+  - /scripts/contact.js
 ---
+
 <div class="contact">
   <section>
     <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
@@ -16,10 +21,10 @@ navOrder: 2
 
   <section>
     <form id="contactForm" class="contact-form">
-      <input type="text" name="FirstName" placeholder="First Name" />
-      <input type="text" name="LastName" placeholder="Last Name" />
-      <input type="text" name="Email" placeholder="Email" />
-      <textarea name="Message" placeholder="Message/Inquiry"></textarea>
+      <input type="text" name="firstname" placeholder="First Name*" />
+      <input type="text" name="lastname" placeholder="Last Name*" />
+      <input type="text" name="email" placeholder="Email*" />
+      <textarea name="message" placeholder="Message/Inquiry"></textarea>
       <button class="btn" type="submit">Submit</button
     </form>
   </section>

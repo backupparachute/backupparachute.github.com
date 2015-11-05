@@ -1,4 +1,5 @@
 $contact-form-input-border-color: rgba($black, .05);
+$error-color: #f00;
 
 .contact {
   @include container;
@@ -39,17 +40,19 @@ $contact-form-input-border-color: rgba($black, .05);
       color: $bps-green-light;
       font-style: italic;
     }
+
+    &.error {
+      margin-bottom: 0;
+      border: 1px solid $error-color;
+    }
   }
 
   input {
     border-bottom: 2px solid $contact-form-input-border-color;
-
-    + textarea {
-      margin-top: rem(15);
-    }
   }
 
   textarea {
+    margin-top: rem(15);
     background: $contact-form-input-border-color;
     height: rem(200);
     resize: vertical;
@@ -61,6 +64,12 @@ $contact-form-input-border-color: rgba($black, .05);
     @include media($medium-up) {
       max-width: rem(300);
     }
+  }
+
+  label.error {
+    display: block;
+    margin-bottom: $gutter;
+    color: $error-color;
   }
 }
 
@@ -91,4 +100,17 @@ $contact-form-input-border-color: rgba($black, .05);
     vertical-align: middle;
     fill: $bps-green;
   }
+}
+
+.contact-msg {
+  margin-top: rem(15);
+  font-size: $font-size-large;
+}
+
+.contact-msg-success {
+  color: $bps-green;
+}
+
+.contact-msg-error {
+  color: $error-color;
 }
