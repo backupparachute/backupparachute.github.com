@@ -1,0 +1,15 @@
+---
+layout: master
+title: Articles
+---
+
+<ul class="article-list">
+  {% for post in site.posts %}
+    <li class="article-preview">
+      <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <h4 class="article-date">{{ post.date | date: '%B %d, %Y' }}</h4>
+      <div class="article-blip">{{ post.excerpt | truncatewords: 50}}</div>
+      <a class="btn btn-ghost btn-small" href="{{ post.url }}">Read More</a>
+    </li>
+  {% endfor %}
+</ul>
