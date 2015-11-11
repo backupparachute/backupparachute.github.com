@@ -10,12 +10,16 @@
     <meta property="og:site_name" content="{{ site.title }}">
 
     {% if page.title %}
-      <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
+      <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
     {% else %}
       <meta property="og:title" content="{{ site.title }}">
     {% endif %}
 
-    <meta property="og:type" content="website">
+    {% if page.date %}
+      <meta property="og:type" content="article">
+    {% else %}
+      <meta property="og:type" content="website">
+    {% endif %}
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
 
