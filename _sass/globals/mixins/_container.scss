@@ -1,5 +1,5 @@
-@mixin container($gutter: $gutter) {
-  @include outer-container;
+@mixin container($max-width: $max-width, $gutter: $gutter) {
+  @include outer-container($max-width);
 
   @if $gutter {
     padding-right: $gutter;

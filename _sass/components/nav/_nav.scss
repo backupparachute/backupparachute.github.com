@@ -1,7 +1,9 @@
+$menu-expand-media-query: $large-up;
+
 .site-nav {
   display: none;
 
-  @include media($small-up) {
+  @include media($menu-expand-media-query) {
     display: block;
 
     .site-logo {
@@ -64,7 +66,7 @@
 .nav-menu-btn {
   margin-top: rem(10);
 
-  @include media($small-up) {
+  @include media($menu-expand-media-query) {
     display: none;
   }
 }
@@ -77,7 +79,7 @@
   padding: $gutter 0;
   width: 100%;
 
-  @include media($small-up) {
+  @include media($menu-expand-media-query) {
     display: none;
   }
 }

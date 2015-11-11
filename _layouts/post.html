@@ -4,9 +4,13 @@ displayTitle: Articles
 ---
 
 <article class="article">
-  <h1 class="article-title">{{ page.title }}</h1>
-  <h4 class="article-date">{{ page.date | date: '%B %d, %Y' }}</h4>
-  {{content}}
+  <header>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <h4 class="article-date">{{ page.date | date: '%B %d, %Y' }}</h4>
+  </header>
+  <section>
+    {{content}}
+  </section>
 </article>
 
 <nav class="article-nav">

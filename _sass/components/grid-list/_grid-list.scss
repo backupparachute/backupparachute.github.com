@@ -13,12 +13,17 @@
     }
 
     @include media($medium-up) {
+      font-size: $font-size-large;
+    }
+
+    @include media($large-up) {
       display: block;
       float: left;
       margin-bottom: $gutter * 2;
       border-right: 1px solid rgba($gray-light, .2);
       border-bottom: 0;
       width: (100 / 3) * 1%;
+      font-size: $default-font-size;
 
       &:nth-child(3n) {
         border-right: 0;
