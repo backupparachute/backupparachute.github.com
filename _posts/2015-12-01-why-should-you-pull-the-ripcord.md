@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: /articles/why-should-you-pull-the-ripcord
+title: Why Should You Pull the Ripcord?
 ---
 
 Do you have an idea for an app or customized software but you don’t have the means to move the idea into fruition? Or, maybe you know your business needs a simpler solution, but you are not sure how to produce it.
