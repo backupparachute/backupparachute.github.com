@@ -1,0 +1,16 @@
+@mixin btn-ghost-light($hover-color: $bps-green, $active-color: $bps-green-light) {
+  border-color: $white;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $hover-color;
+  }
+
+  &:active {
+    border-color: $active-color;
+    background-color: $active-color;
+    color: $white;
+  }
+}

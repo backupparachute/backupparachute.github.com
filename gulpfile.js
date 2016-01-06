@@ -29,7 +29,7 @@ gulp.task('svgmin', function(){
 })
 
 gulp.task('imagemin', function() {
-  return gulp.src('raw_assets/*.png')
+  return gulp.src('raw_assets/*.{png,jpg}')
           .pipe(imagemin({
               progressive: true,
               use: [pngquant()]

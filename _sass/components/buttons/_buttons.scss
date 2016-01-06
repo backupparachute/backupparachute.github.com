@@ -1,6 +1,7 @@
 .btn {
+  display: inline-block;
   border: 0;
-  background: $bps-green;
+  background-color: $bps-green;
   padding: rem(15) rem(20);
   text-transform: uppercase;
   text-decoration: none;
@@ -10,11 +11,11 @@
 
   &:hover,
   &:focus {
-    background: $bps-green-dark;
+    background-color: $bps-green-dark;
   }
 
   &:active {
-    background: $bps-green-light;
+    background-color: $bps-green-light;
   }
 }
 
@@ -25,35 +26,35 @@
 
 .btn-ghost {
   border: 1px solid $bps-green;
-  background: transparent;
+  background-color: transparent;
   color: $bps-green;
 
   &:hover,
   &:focus {
-    background: $bps-green;
+    background-color: $bps-green;
     color: $white;
   }
 
   &:active {
     border-color: $bps-green-dark;
-    background: $bps-green-dark;
+    background-color: $bps-green-dark;
     color: $white;
   }
 }
 
 .btn-text {
-  background: transparent;
+  background-color: transparent;
   padding: 0;
   color: $bps-green;
 
   &:hover,
   &:focus {
-    background: transparent;
+    background-color: transparent;
     color: $bps-green-dark;
   }
 
   &:active {
-    background: transparent;
+    background-color: transparent;
     color: $bps-green-light;
   }
 }

@@ -3,6 +3,11 @@
 @import 'billboards-variables';
 
 @import 'bps-billboard';
+@import 'vh-billboard';
+
+.billboard-view {
+  display: none;
+}
 
 .billboard {
   @include display(flex);
@@ -35,4 +40,25 @@
   @include media($large-up) {
     font-size: rem(96);
   }
+
+  .btn {
+    font-size: .25em;
+  }
+}
+
+.billboard-subhead {
+  margin-bottom: rem(5);
+  line-height: 1.2;
+  letter-spacing: $expanded-letter-spacing-small;
+  font-size: .2em;
+  font-weight: inherit;
+
+  @include media($medium-up) {
+    font-size: .2em;
+  }
+}
+
+.billboard-tag {
+  font-size: inherit;
+  font-weight: inherit;
 }

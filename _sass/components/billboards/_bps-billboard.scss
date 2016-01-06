@@ -1,7 +1,11 @@
 @import '../footer/footer-variables';
 
-.bps-billboard {
-  background: $off-white;
+.billboard-is-bps {
+  background-color: $off-white;
+
+  .bps-billboard {
+    display: block;
+  }
 
   .billboard {
     background: transparent url('../images/ripcord-sketch-20.png') no-repeat 85% bottom;

@@ -1,0 +1,12 @@
+@mixin site-nav($color: $white, $hover-color: $bps-green-light, $active-color: $bps-green-dark) {
+  color: $color;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &:active {
+    color: $active-color;
+  }
+}

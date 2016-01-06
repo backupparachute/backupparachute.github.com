@@ -1,0 +1,73 @@
+@import '../nav/helpers/nav-mixins';
+@import '../buttons/helpers/button-mixins';
+
+.billboard-is-vh {
+  background: transparent url('../images/vh-billboard-bkg.jpg') no-repeat center center;
+  background-size: cover;
+
+  .site-logo svg {
+    fill: $white;
+  }
+
+  .site-footer {
+    background-color: $vh-blue-light;
+    color: $vh-blue-dark;
+
+    .icon {
+      fill: $vh-blue-dark;
+    }
+
+    &:after {
+      background-color: $vh-blue-dark;
+    }
+  }
+
+  .btn-ghost {
+    @include btn-ghost-light($hover-color: $vh-blue, $active-color: $vh-blue-light);
+  }
+
+  .site-nav {
+    a {
+      @include site-nav($hover-color: $white, $active-color: $vh-blue-dark);
+    }
+
+    &.nav-is-open {
+      a {
+        @include site-nav($color: $vh-blue, $hover-color: $vh-blue-light, $active-color: $vh-blue-dark);
+      }
+
+      .site-logo svg {
+        fill: $vh-blue;
+      }
+    }
+
+    .btn-text {
+      color: $vh-blue;
+
+      &:hover,
+      &:focus {
+        color: $vh-blue-light;
+      }
+
+      &:active {
+        color: $vh-blue-dark;
+      }
+    }
+
+    .nav-menu-close-btn {
+      border-top-color: $vh-blue;
+    }
+  }
+
+  .vh-billboard {
+    display: block;
+  }
+
+  .billboard {
+    padding-bottom: 0;
+  }
+
+  .billboard-msg {
+    color: $white;
+  }
+}
