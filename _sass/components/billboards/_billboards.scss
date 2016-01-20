@@ -33,10 +33,6 @@
   font-size: 12vw;
   font-weight: $font-weight-ultra-bold;
 
-  @include media($medium-up) {
-    padding-left: rem(60);
-  }
-
   @include media($large-up) {
     font-size: rem(96);
   }
@@ -50,7 +46,7 @@
   margin-bottom: rem(5);
   line-height: 1.2;
   letter-spacing: $expanded-letter-spacing-small;
-  font-size: .2em;
+  font-size: .5em;
   font-weight: inherit;
 
   @include media($medium-up) {

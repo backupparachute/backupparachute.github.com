@@ -61,13 +61,49 @@
 
   .vh-billboard {
     display: block;
+
+    @include media($large-up) {
+      @include display(flex);
+      @include align-items(center);
+    }
   }
 
   .billboard {
-    padding-bottom: 0;
+    padding-top: $billboard-padding-top * 1.5;
+
+    @include media($large-up) {
+      padding-top: $billboard-padding-top-default;
+    }
+  }
+
+  .billboard-hero {
+    margin-bottom: rem(30);
+
+    @include media($large-up) {
+      @include flex(0 0 398px);
+    }
+
+    img {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
   }
 
   .billboard-msg {
     color: $white;
+
+    @include media($large-up) {
+      @include flex(1 auto);
+      padding-left: rem(60);
+    }
+  }
+
+  .billboard-tag {
+    margin-bottom: rem(10);
+
+    @include media($large-up) {
+      margin-bottom: 0;
+    }
   }
 }

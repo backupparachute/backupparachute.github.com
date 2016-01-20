@@ -14,6 +14,7 @@
 
   .billboard-msg {
     @include media($medium-up) {
+      padding-left: rem(60);
       max-width: rem(1000);
     }
   }
