@@ -1,3 +1,8 @@
+$grid-border-color: rgba($gray-light, .2);
+$grid-border-width: 1px;
+$grid-border-height: 80%;
+$grid-border-offset: (100% - $grid-border-height) / 2;
+
 .grid-list {
   @include row;
   margin: 0;
@@ -5,7 +10,7 @@
   list-style-type: none;
 
   > li {
-    border-bottom: 1px solid rgba($gray-light, .2);
+    border-bottom: $grid-border-width solid $grid-border-color;
 
     &:last-child {
       margin-bottom: $gutter * 2;
@@ -13,28 +18,40 @@
     }
 
     @include media($medium-up) {
-      font-size: $font-size-large;
-    }
-
-    @include media($large-up) {
       display: block;
+      position: relative;
       float: left;
-      margin-bottom: $gutter * 2;
-      border-right: 1px solid rgba($gray-light, .2);
       border-bottom: 0;
-      width: (100 / 3) * 1%;
+      width: (100 / 2) * 1%;
       font-size: $default-font-size;
 
-      &:nth-child(3n) {
-        border-right: 0;
+
+      &:nth-child(2n) {
+        &:before {
+          position: absolute;
+          bottom: $grid-border-offset;
+          left: 0;
+          background-color: $grid-border-color;
+          width: $grid-border-width;
+          height: $grid-border-height;
+          content: '';
+        }
       }
 
-      &:nth-child(3n+1) {
+      &:nth-child(2n+1) {
         clear: both;
       }
 
-      &:last-child {
-        margin-bottom: 0;
+      &:nth-child(-n+2) {
+        &:after {
+          position: absolute;
+          bottom: 0;
+          left: $grid-border-offset;
+          background-color: $grid-border-color;
+          width: $grid-border-height;
+          height: $grid-border-width;
+          content: '';
+        }
       }
     }
   }
