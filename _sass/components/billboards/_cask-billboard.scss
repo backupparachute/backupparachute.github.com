@@ -6,7 +6,82 @@
     fill: $white;
   }
 
+  .site-footer {
+    background-color: $cask-gray-light;
+    color: $white;
+
+    .icon {
+      fill: $black;
+    }
+
+    &:after {
+      background-color: $cask-gray-dark;
+    }
+  }
+
+  .btn-ghost {
+    @include btn-ghost-light($hover-color: $cask-gold, $active-color: $cask-gold-light);
+  }
+
+  .site-nav {
+    a {
+      @include site-nav($hover-color: $white, $active-color: $cask-gold-dark);
+    }
+
+    &.nav-is-open {
+      a {
+        @include site-nav($color: $cask-gold, $hover-color: $cask-gold-light, $active-color: $cask-gold-dark);
+      }
+
+      .site-logo svg {
+        fill: $cask-gold;
+      }
+    }
+
+    .btn-text {
+      color: $cask-gold;
+
+      &:hover,
+      &:focus {
+        color: $cask-gold-light;
+      }
+
+      &:active {
+        color: $cask-gold-dark;
+      }
+    }
+
+    .nav-menu-close-btn {
+      border-top-color: $cask-gold;
+    }
+  }
+
+  .billboard {
+    padding-bottom: $billboard-padding-top-large;
+  }
+
   .cask-billboard {
     display: block;
+  }
+
+  .billboard-hero {
+    margin: 0 auto rem(30);
+    max-width: rem(420);
+  }
+
+  .billboard-msg {
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+
+    @include media($medium-up) {
+      max-width: rem(800);
+      font-size: $billboard-msg-font-size-medium;
+    }
+
+    @include media($large-up) {
+      max-width: rem(1000);
+      font-size: $billboard-msg-font-size-large;
+    }
   }
 }
