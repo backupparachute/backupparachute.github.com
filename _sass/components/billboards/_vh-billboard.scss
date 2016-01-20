@@ -62,47 +62,56 @@
   .vh-billboard {
     display: block;
 
-    @include media($large-up) {
+    @include media($medium-up) {
       @include display(flex);
       @include align-items(center);
     }
   }
 
   .billboard {
-    padding-top: $billboard-padding-top * 1.5;
+    padding-bottom: $billboard-padding-top-large;
 
-    @include media($large-up) {
-      padding-top: $billboard-padding-top-default;
+    @include media($medium-up) {
+      padding-top: $billboard-padding-top-large;
     }
   }
 
   .billboard-hero {
-    margin-bottom: rem(30);
+    margin: {
+      right: auto;
+      bottom: rem(30);
+      left: auto;
+    }
+    max-width: 300px;
+
+    @include media($medium-up) {
+      @include flex(0 0 300px);
+      max-width: none;
+    }
 
     @include media($large-up) {
       @include flex(0 0 398px);
-    }
-
-    img {
-      display: block;
-      position: relative;
-      margin: 0 auto;
     }
   }
 
   .billboard-msg {
     color: $white;
 
-    @include media($large-up) {
+    @include media($medium-up) {
       @include flex(1 auto);
       padding-left: rem(60);
+      font-size: $billboard-msg-font-size-medium;
+    }
+
+    @include media($large-up) {
+      font-size: $billboard-msg-font-size-large;
     }
   }
 
   .billboard-tag {
     margin-bottom: rem(10);
 
-    @include media($large-up) {
+    @include media($medium-up) {
       margin-bottom: 0;
     }
   }

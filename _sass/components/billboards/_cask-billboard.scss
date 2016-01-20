@@ -1,0 +1,12 @@
+.billboard-is-cask {
+  background: transparent url('../images/cask-billboard-bkg.jpg') no-repeat center center;
+  background-size: cover;
+
+  .site-logo svg {
+    fill: $white;
+  }
+
+  .cask-billboard {
+    display: block;
+  }
+}

@@ -1,0 +1,76 @@
+.billboard-is-impress {
+  background: transparent url('../images/impress-billboard-bkg.jpg') no-repeat center center;
+  background-size: cover;
+
+  .site-logo svg {
+    fill: $white;
+  }
+
+  .site-footer {
+    background-color: $impress-red-light;
+    color: $white;
+
+    .icon {
+      fill: $impress-red-darker;
+    }
+
+    &:after {
+      background-color: $impress-red-dark;
+    }
+  }
+
+  .btn-ghost {
+    @include btn-ghost-light($hover-color: $impress-red, $active-color: $impress-red-light);
+  }
+
+  .site-nav {
+    a {
+      @include site-nav($hover-color: $white, $active-color: $impress-red-dark);
+    }
+
+    &.nav-is-open {
+      a {
+        @include site-nav($color: $impress-red, $hover-color: $impress-red-light, $active-color: $impress-red-dark);
+      }
+
+      .site-logo svg {
+        fill: $impress-red;
+      }
+    }
+
+    .btn-text {
+      color: $impress-red;
+
+      &:hover,
+      &:focus {
+        color: $impress-red-light;
+      }
+
+      &:active {
+        color: $impress-red-dark;
+      }
+    }
+
+    .nav-menu-close-btn {
+      border-top-color: $impress-red;
+    }
+  }
+
+  .billboard {
+    padding-bottom: $billboard-padding-top-large;
+  }
+
+  .impress-billboard {
+    display: block;
+  }
+
+  .billboard-hero {
+    margin: 0 auto rem(30);
+    max-width: rem(420);
+  }
+
+  .billboard-msg {
+    text-align: center;
+    color: $white;
+  }
+}

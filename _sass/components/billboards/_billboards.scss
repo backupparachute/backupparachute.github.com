@@ -4,6 +4,7 @@
 
 @import 'bps-billboard';
 @import 'vh-billboard';
+@import 'impress-billboard';
 
 .billboard-view {
   display: none;
@@ -12,13 +13,9 @@
 .billboard {
   @include display(flex);
   @include align-items(center);
-  padding-top: $billboard-padding-top-default;
-  padding-bottom: $billboard-padding-top-default;
+  padding-top: $billboard-padding-top;
+  padding-bottom: $billboard-padding-top;
   width: 100%;
-
-  @include media($medium-up) {
-    padding-top: $billboard-padding-top;
-  }
 
   > section {
     @include container;
@@ -30,11 +27,11 @@
   text-transform: uppercase;
   line-height: 1;
   color: $primary-color;
-  font-size: 12vw;
+  font-size: $billboard-msg-font-size;
   font-weight: $font-weight-ultra-bold;
 
   @include media($large-up) {
-    font-size: rem(96);
+    font-size: $billboard-msg-font-size-large;
   }
 
   .btn {
@@ -46,7 +43,7 @@
   margin-bottom: rem(5);
   line-height: 1.2;
   letter-spacing: $expanded-letter-spacing-small;
-  font-size: .5em;
+  font-size: .35em;
   font-weight: inherit;
 
   @include media($medium-up) {

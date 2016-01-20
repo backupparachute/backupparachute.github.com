@@ -1,4 +1,8 @@
 @import '../header/header-variables';
 
-$billboard-padding-top: $site-header-padding-top;
-$billboard-padding-top-default: $billboard-padding-top * 3;
+$billboard-padding-top: $site-header-padding-top * 1.5;
+$billboard-padding-top-large: $billboard-padding-top * 2;
+
+$billboard-msg-font-size: 12vw;
+$billboard-msg-font-size-large: rem(96);
+$billboard-msg-font-size-medium: rem(75);

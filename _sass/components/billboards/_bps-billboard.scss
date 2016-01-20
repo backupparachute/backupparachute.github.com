@@ -10,6 +10,11 @@
   .billboard {
     background: transparent url('../images/ripcord-sketch-20.png') no-repeat 85% bottom;
     background-size: auto 100%;
+
+    @include media($medium-up) {
+      padding-top: $billboard-padding-top-large;
+      padding-bottom: $billboard-padding-top-large;
+    }
   }
 
   .billboard-msg {
