@@ -6,7 +6,8 @@ var billboardRandomizer = (function() {
 
   var billboardPrefix = 'billboard-is-';
   // var billboards = ['bps', 'vh', 'impress', 'cask'];
-  var billboards = ['bps', 'vh', 'cask'];
+  // var billboards = ['bps', 'vh', 'cask'];
+  var billboards = ['bps'];
   var selected = billboards[getRandomIntInclusive(0, billboards.length - 1)];
 
   document.body.classList.add(billboardPrefix + selected);
