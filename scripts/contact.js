@@ -22,7 +22,9 @@ $form.validate({
   submitHandler: function(form) {
     $.ajax({
       dataType: 'jsonp',
-      url: "http://getsimpleform.com/messages/ajax?form_api_token=3a99ff25bc940dda8538112f249cae9b",
+      // url: "http://getsimpleform.com/messages/ajax?form_api_token=3a99ff25bc940dda8538112f249cae9b",
+      // url: "https://bps.securetransmit.io/web/test/form?token=EcAJg4QTrsGTmLpoxiLvS5qA&st_rau=true",
+      url: "https://bps.securetransmit.io/web/test/form?token=EcAJg4QTrsGTmLpoxiLvS5qA",
       data: $(form).serializeObject()
     }).done(function() {
         $(form).append('<h6 class="contact-msg contact-msg-success">Thank you! We\'ll be in touch soon.</h6>');
