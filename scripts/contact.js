@@ -28,11 +28,14 @@ $form.validate({
       // url: "https://bps.securetransmit.io/web/test/form?token=EcAJg4QTrsGTmLpoxiLvS5qA&st_rau=true",
       url: "https://bps.securetransmit.io/forms/bps-contact?token=EcAJg4QTrsGTmLpoxiLvS5qA",
       data: $(form).serializeObject()
-    }).done(function() {
+    // }).done(function() {
+        // $(form).append('<h6 class="contact-msg contact-msg-success">Thank you! We\'ll be in touch soon.</h6>');
+        // form.reset();
+    // }).fail(function() {
+        // $(form).append('<h6 class="contact-msg contact-msg-error">An error occurred. Please try again.</h6>');
+    }).always(function() {
         $(form).append('<h6 class="contact-msg contact-msg-success">Thank you! We\'ll be in touch soon.</h6>');
         form.reset();
-    }).fail(function() {
-        $(form).append('<h6 class="contact-msg contact-msg-error">An error occurred. Please try again.</h6>');
     });
   },
   rules: {
