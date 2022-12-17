@@ -1,15 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(){
-  build_nav();
-});
 
-function build_nav() {
-
-  document.body.insertAdjacentHTML("afterbegin", get_nav_html());
-
-}
-
-function get_nav_html() {
-  return `<nav class="navbar navbar-light bg-light">
+const nav_html = `<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="https://backupparachute.com?utm_source=backupparachute&utm_medium=logo&utm_campaign=basic_auth_generator"><img src="https://backupparachute.com/images/bps-logo-green.png" class="" height="40px"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -51,4 +41,13 @@ function get_nav_html() {
   </div>
 </nav>
 `;
+
+document.addEventListener("DOMContentLoaded", function(){
+  build_nav();
+});
+
+function build_nav() {
+
+  document.body.insertAdjacentHTML("afterbegin", nav_html);
+
 }
