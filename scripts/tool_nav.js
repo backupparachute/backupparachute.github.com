@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function build_nav() {
-  let body = document.getElementsByName("body")[0];
 
-  body.insertAdjacentHTML(get_nav_html());
+  document.body.insertAdjacentHTML("afterbegin", get_nav_html());
 
 }
 
