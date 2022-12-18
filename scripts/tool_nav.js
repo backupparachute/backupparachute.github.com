@@ -1,7 +1,11 @@
+var thisScript = document.currentScript;
+var content = thisScript.getAttribute("data-content");
+
+setInterval(() => console.log(thisScript.src), 2000);
 
 const nav_html = `<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://backupparachute.com?utm_source=backupparachute&utm_medium=logo&utm_campaign=basic_auth_generator"><img src="https://backupparachute.com/images/bps-logo-green.png" class="" height="40px"></a>
+    <a class="navbar-brand" href="https://backupparachute.com?utm_source=backupparachute&utm_medium=logo&utm_campaign=basic_auth_generator&utm_content=${content}"><img src="https://backupparachute.com/images/bps-logo-green.png" class="" height="40px"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,7 +48,6 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
 
 document.addEventListener("DOMContentLoaded", function(){
   build_nav();
-  let content = document.currentScript.getAttribute("data-content");
   console.log("content = "+content);
 });
 
