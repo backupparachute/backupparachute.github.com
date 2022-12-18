@@ -50,8 +50,8 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         -->
-        <div class="d-flex">
-        	<a href="https://backupparachute.com/contact?utm_source=backupparachute&utm_medium=ad-link&utm_campaign=${campaign}&utm_content=adtextlink">Get a custom app like this for your website today!</a>
+        <div class="">
+        	<a href="https://backupparachute.com/contact?utm_source=backupparachute&utm_medium=ad-link&utm_campaign=${campaign}&utm_content=adtextlink">Get a custom app for your website today!</a>
         			<div class="">
         			<small>Flat rate pricing, starts at $1000</small>
         			</div>
