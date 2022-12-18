@@ -44,6 +44,8 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
 
 document.addEventListener("DOMContentLoaded", function(){
   build_nav();
+  let content = document.currentScript.getAttribute("data-content");
+  console.log("content = "+content);
 });
 
 function build_nav() {
