@@ -38,10 +38,13 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/cashflow-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Cashflow Calculator</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="https://backupparachute.com/tranche-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Tranche Calculator</a>
+            <a class="nav-link" aria-current="page" href="https://backupparachute.com/sdr-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">SDR Calculator</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="https://backupparachute.com/sdr-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">SDR Calculator</a>
+            <a class="nav-link" aria-current="page" href="https://backupparachute.com/startup-metrics?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Startup Metrics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://backupparachute.com/tranche-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Tranche Calculator</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/goal-tracker?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Goal Tracker</a>
