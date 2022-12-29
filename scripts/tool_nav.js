@@ -59,7 +59,7 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
         <div class="">
         	<a href="https://backupparachute.com/contact?utm_source=backupparachute&utm_medium=ad-link&utm_campaign=${campaign}&utm_content=adtextlink">Get a custom app for your website today!</a>
         			<div class="">
-        			<small>Flat rate pricing, starts at $1000</small>
+        			<small><mark>Flat rate pricing, starts at $1000</mark></small>
         			</div>
         </div>
       </div>
