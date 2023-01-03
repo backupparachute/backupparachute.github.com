@@ -7,7 +7,7 @@ github: https://github.com/backupparachute/
 email: info@backupparachute.com
 phone: 888-865-2012
 
-gems:
+plugins:
   - jekyll-sitemap
 
 # Outputting
