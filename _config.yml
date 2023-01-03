@@ -31,4 +31,3 @@ defaults:
       path:            "libs/**"
     values:
       sitemap:         false
-	  
