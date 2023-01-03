@@ -31,8 +31,4 @@ defaults:
       path:            "libs/**"
     values:
       sitemap:         false
-  -
-    scope:
-      path:            "basic-auth-generator"
-    values:
-      sitemap:         true	  
+	  
