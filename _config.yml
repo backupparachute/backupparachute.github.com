@@ -24,3 +24,10 @@ exclude:
 sass:
   style: compressed
   sass_dir: /
+
+defaults:
+  -
+    scope:
+      path:            "libs/**"
+    values:
+      sitemap:         false
