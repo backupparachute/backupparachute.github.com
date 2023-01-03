@@ -1,6 +1,6 @@
 title: Backup Parachute Software
 description: We leverage open source software to craft solutions that empower our clients to reach the next level.
-url: http://backupparachute.com
+url: https://backupparachute.com
 twitter: https://twitter.com/backupparachute
 linkedin: https://www.linkedin.com/company/backup-parachute-software
 github: https://github.com/backupparachute/
@@ -31,3 +31,8 @@ defaults:
       path:            "libs/**"
     values:
       sitemap:         false
+  -
+    scope:
+      path:            "basic-auth-generator"
+    values:
+      sitemap:         true	  
