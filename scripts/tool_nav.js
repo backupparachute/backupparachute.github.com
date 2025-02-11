@@ -50,7 +50,7 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/goal-tracker?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Goal Tracker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="https://backupparachute.com/duration-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">duration-calculator</a>
+            <a class="nav-link" aria-current="page" href="https://backupparachute.com/duration-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Duration Calculator</a>
           </li>
         </ul>
         <!--
