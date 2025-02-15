@@ -1,4 +1,6 @@
 ---
+layout: post
+permalink: /articles/top-10-reasons-why-website-calculators-are-essential-for-your-business
 title: "Top 10 Reasons Why Website Calculators Are Essential for Your Business"
 description: "Discover the playful and powerful benefits of website calculators. Learn how these nifty tools boost engagement, SEO, and leads while saving you time and money."
 tags: ["SEO", "website calculators", "lead generation", "backlinks", "SaaS"]
