@@ -34,6 +34,10 @@ When you are completely happy with the final version, we move to the grand final
 
 Our goal is to make the transition effortless so that you get a fully functional, gorgeous calculator that fits perfectly into your website’s design and workflow.
 
+## Our 100% Satisfaction Guarantee
+
+At Backup Parachute Software, we stand behind our work. With our 100% satisfaction guarantee, you can rest easy knowing that we’re not finished until you’re completely happy with your custom calculator. We believe in delivering quality, and our guaranteed two-week turnaround for the first version is just one of the ways we show our commitment to excellence.
+
 ## Why Choose Backup Parachute Software?
 
 At Backup Parachute Software, we believe in transparency, design, and top quality results. With our flat rate pricing, you know exactly what you are paying for with no hidden fees or surprises. Our process is designed to be hassle free and enjoyable, allowing you to sit back and relax while we work our magic.
