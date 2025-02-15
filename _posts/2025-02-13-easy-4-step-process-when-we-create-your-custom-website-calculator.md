@@ -38,7 +38,7 @@ Our goal is to make the transition effortless so that you get a fully functional
 
 At Backup Parachute Software, we believe in transparency, design, and top quality results. With our flat rate pricing, you know exactly what you are paying for with no hidden fees or surprises. Our process is designed to be hassle free and enjoyable, allowing you to sit back and relax while we work our magic.
 
-We are not just building calculators; we are crafting custom tools that drive traffic, improve your SEO, and generate leads. From the moment you send us your spreadsheet to the final embedded calculator, we work hand in hand with you to ensure that the end product not only meets but exceeds your expectations. Our commitment to creating beautiful, high performing calculators sets us apart in the industry.
+We are not just building calculators, we are crafting custom tools that drive traffic, improve your SEO, and generate leads. From the moment you send us your spreadsheet to the final embedded calculator, we work hand in hand with you to ensure that the end product not only meets but exceeds your expectations. Our commitment to creating beautiful, high performing calculators sets us apart in the industry.
 
 ## Ready to Get Started?
 
