@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="EABOZEKF" defer></script>
+<!-- / Fathom -->
+
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    {% if page.title %}
+      <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+    {% else %}
+      <meta property="og:title" content="{{ site.title }}">
+    {% endif %}
+
+    {% if page.date %}
+      <meta property="og:type" content="article">
+    {% else %}
+      <meta property="og:type" content="website">
+    {% endif %}
+
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+
+    {% if page.excerpt %}
+      <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50}}">
+    {% elsif page.description %}
+      <meta property="og:description" content="{{ page.description }}">
+    {% else %}
+      <meta property="og:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+      <meta property="og:image" content="{{ site.url }}/images/{{ page.image }}">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/images/bps-og-logo.png">
+    {% endif %}
+
+    {% if page.date %}
+      <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+      <meta property="article:author" content="{{ site.url }}">
+    {% endif %}
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@backupparachute">
+    <meta name="twitter:creator" content="@backupparachute">
+    <meta name="twitter:image" content="{{ site.url }}/images/bps-twitter-card-thumb.png">
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+
+    {% if page.excerpt %}
+      <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncatewords: 50}}">
+    {% elsif page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://backupparachute.com/css/tools.css">
+
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/site.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700,500,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body {%if page.pageClass %}class={{page.pageClass}}{% endif %}>
+    {% include svginject.html %}
+
+    <header class="site-header">
+      <div class="site-header-left">
+        {%if page.pageType == 'billboard' %}
+          <a class="site-logo billboard-logo" href="/"><svg><use xlink:href="#site_logo"></use></svg></a>
+        {% else %}
+          <a class="site-logo" href="/"><svg><use xlink:href="#ripcord"></use></svg></a>
+          <h2 class="site-title">
+            {%if page.displayTitle %}
+              {{page.displayTitle}}
+            {% else %}
+              {{page.title}}
+            {% endif %}
+          </h2>
+        {% endif %}
+      </div>
+      {% include nav.html %}
+    </header>
+
+    <main {%if page.pageType == 'billboard' %}class="billboard"{% endif %}>
+      {{content}}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="/scripts/modernizr-flexboxtweener.js"></script>
+
+    <script>
+      var menuBtn = document.getElementById('navMenuBtn');
+      var menuCloseBtn = document.getElementById('navMenuCloseBtn');
+      var menu = document.getElementById('navMenu');
+      var html = document.getElementsByTagName('html')[0];
+
+      menuBtn.addEventListener('click', toggleMenu);
+      menuCloseBtn.addEventListener('click', toggleMenu);
+
+      function toggleMenu() {
+        menu.classList.toggle('nav-is-open');
+        html.classList.toggle('no-scroll');
+      }
+
+      window.addEventListener('resize', function(){
+        if (window.matchMedia("(min-width: 40em)").matches) {
+          menu.classList.remove('nav-is-open');
+          html.classList.remove('no-scroll');
+        }
+      });
+    </script>
+
+    {% if page.scripts %}
+      {% for file in page.scripts %}
+      <script src='{{ file }}' type="text/javascript"></script>
+      {% endfor %}
+    {% endif %}
+
+     <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-49943523-1');ga('send','pageview');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="/scripts/copyright.js" type="text/javascript"></script>
+  </body>
+</html>
