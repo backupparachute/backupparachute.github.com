@@ -1,0 +1,98 @@
+---
+layout: master
+---
+
+{%- assign hero_btn_primary = page.primary_btn_class | default: "btn btn-light btn-lg" -%}
+{%- assign hero_btn_secondary = page.secondary_btn_class | default: "btn btn-outline-light btn-lg" -%}
+
+<article>
+  <header class="product-hero"{% if page.brand_style %} style="{{ page.brand_style }}"{% endif %}>
+    <div class="container text-center">
+      {% if page.logo %}
+        <img class="product-logo" src="{{ page.logo }}" alt="{{ page.title }} logo">
+      {% else %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      {% if page.badge %}
+        <div class="mt-2"><span class="product-badge">{{ page.badge }}</span></div>
+      {% endif %}
+      {% if page.tagline %}
+        <p class="lead mt-3 mb-0">{{ page.tagline }}</p>
+      {% endif %}
+      <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
+        {% if page.primary_cta_url %}
+          <a class="{{ hero_btn_primary }}" href="{{ page.primary_cta_url }}" {% if page.primary_cta_url contains '://' %}target="_blank" rel="noopener"{% endif %}>
+            {{ page.primary_cta_label | default: "Visit site" }}
+          </a>
+        {% endif %}
+        {% if page.secondary_cta_url %}
+          <a class="{{ hero_btn_secondary }}" href="{{ page.secondary_cta_url }}">
+            {{ page.secondary_cta_label | default: "Learn more" }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    {% if page.brand_bar %}
+      <div class="product-brand-bar" style="{{ page.brand_bar }}"></div>
+    {% endif %}
+  </header>
+
+  {% if page.features %}
+    <section class="container py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for feature in page.features %}
+          <div class="col">
+            <div class="card card-soft h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">{{ feature.title }}</h3>
+                <p class="card-text text-muted mb-0">{{ feature.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="container py-5">
+    <div class="article-body">
+      {% if page.logo %}
+        <h1 class="visually-hidden">{{ page.title }}</h1>
+      {% endif %}
+      {{ content }}
+    </div>
+  </section>
+
+  {% if page.cta_url %}
+    <section class="bg-primary text-white py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3">{{ page.cta_heading | default: "Ready to get started?" }}</h2>
+        {% if page.cta_subheading %}
+          <p class="lead mb-4">{{ page.cta_subheading }}</p>
+        {% endif %}
+        <a class="btn btn-light btn-lg" href="{{ page.cta_url }}" {% if page.cta_url contains '://' %}target="_blank" rel="noopener"{% endif %}>
+          {{ page.cta_label | default: "Get started" }}
+        </a>
+      </div>
+    </section>
+  {% endif %}
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | default: page.tagline }}",
+  "url": "{{ page.url | absolute_url }}",
+  {% if page.logo %}"image": "{{ page.logo | absolute_url }}",{% endif %}
+  {% if page.primary_cta_url %}"downloadUrl": "{{ page.primary_cta_url }}",{% endif %}
+  "applicationCategory": "{{ page.category | default: 'BusinessApplication' }}",
+  "operatingSystem": "{{ page.os | default: 'Web' }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Backup Parachute Software",
+    "url": "{{ site.url }}"
+  }
+}
+</script>

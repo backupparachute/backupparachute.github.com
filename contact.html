@@ -1,33 +1,58 @@
 ---
-layout: master
+layout: page
 title: Contact
-navOrder: 5
+description: Get in touch with Backup Parachute Software. Email, social, or drop a message via the form.
+permalink: /contact/
 scripts:
   - /libs/jquery/dist/jquery.min.js
   - /libs/jquery-validation/dist/jquery.validate.min.js
   - /scripts/contact.js
 ---
 
-<div class="contact">
-  <section>
-    <h1 class="h1">Let's Chat!</h1>
-    <h3 class="h3">Our team is committed to providing innovative software solutions and advisory services. Have an idea you want to transform into reality? Contact us at 888-865-2012 for a personalized consultation.</h3>
+<div class="row g-5">
+  <div class="col-lg-5">
+    <h2 class="fw-bold">Let's chat.</h2>
+    <p class="text-muted">
+      Have a product question, a partnership idea, or just want to say hi? Drop us a line.
+      If you're looking for technical advisory or fractional CTO help, head over to
+      <a href="https://ctoconnect.io">CTO Connect</a>.
+    </p>
 
-    <ul class="contact-list">
-      <li><svg class="icon icon-email"><use xlink:href="#email"></use></svg> <a href="mailto://{{site.email}}">{{site.email}}</a></li>
-      <li><svg class="icon icon-phone"><use xlink:href="#phone"></use></svg> {{site.phone}}</li>
-      <li><svg class="icon icon-twitter"><use xlink:href="#twitter"></use></svg> <a href="{{site.twitter}}" target="_blank">@backupparachute</a></li>
+    <ul class="list-unstyled mt-4">
+      <li class="mb-2">
+        <svg style="width:18px;height:18px;fill:currentColor;vertical-align:-3px;margin-right:.5rem;"><use xlink:href="#email"></use></svg>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </li>
+      <li class="mb-2">
+        <svg style="width:18px;height:18px;fill:currentColor;vertical-align:-3px;margin-right:.5rem;"><use xlink:href="#phone"></use></svg>
+        {{ site.phone }}
+      </li>
     </ul>
-  </section>
+  </div>
 
-  <section>
-    <h3></h3>
-    <form id="contactForm" class="contact-form">
-      <input type="text" name="firstname" placeholder="First Name*" required/>
-      <input type="text" name="lastname" placeholder="Last Name*" required/>
-      <input type="text" name="email" placeholder="Email*" required/>
-      <textarea name="message" placeholder="Message/Inquiry" required></textarea>
-      <button class="btn" type="submit">Email</button
+  <div class="col-lg-7">
+    <form id="contactForm" class="needs-validation" novalidate>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstname" name="firstname" required>
+        </div>
+        <div class="col-md-6">
+          <label for="lastname" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastname" name="lastname" required>
+        </div>
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
     </form>
-  </section>
+  </div>
 </div>

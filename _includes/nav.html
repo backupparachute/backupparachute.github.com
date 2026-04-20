@@ -1,15 +1,33 @@
-<div class="site-header-right">
-  <button id="navMenuBtn" class="btn btn-ghost nav-menu-btn">Menu</button>
-  <div id="navMenu" class="site-nav">
-    <div class="site-logo"><svg><use xlink:href="#ripcord"></use></svg></div>
-    <nav>
-      {% assign pages = site.pages | sort:"navOrder"  %}
-      {% for p in pages %}
-        {% if p.navOrder %}
-          <a href="{{ p.url }}">{{ p.title }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
-    <button id="navMenuCloseBtn" class="btn btn-text nav-menu-close-btn">Close</button>
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <svg aria-hidden="true"><use xlink:href="#ripcord"></use></svg>
+      <span>Backup Parachute <span class="fw-light">Software</span></span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bpsNav"
+            aria-controls="bpsNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="bpsNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link{% if page.url contains '/products' %} active{% endif %}" href="/products/">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.url contains '/articles' or page.layout == 'post' %} active{% endif %}" href="/articles/">Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="/about/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/contact/' %} active{% endif %}" href="/contact/">Contact</a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <a class="nav-link text-muted" href="/tools/">Free Tools</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>

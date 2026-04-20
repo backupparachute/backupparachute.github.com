@@ -1,36 +1,77 @@
 ---
 layout: master
-pageType: billboard
-pageClass: billboard-is-bps
-scripts:
-  - /scripts/billboard.js
+description: A portfolio of software built to last. SaaS products, calculators, and articles from Backup Parachute Software.
 ---
 
-<section class="billboard-view bps-billboard">
-  <div class="billboard-msg">
-    <!-- <h1 class="billboard-tag">Pull the ripcord for mobile and web solutions</h1> -->
-    <h1 class="billboard-tag">When failure is not an option, accept no substitutes</h1>
+{%- assign hero_products = site.products | sort: "order" -%}
+
+<section id="bpsHero" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+  <div class="carousel-indicators">
+    {% for product in hero_products %}
+      <button type="button" data-bs-target="#bpsHero" data-bs-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active" aria-current="true"{% endif %} aria-label="{{ product.title }}"></button>
+    {% endfor %}
+  </div>
+
+  <div class="carousel-inner">
+    {% for product in hero_products %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}"{% if product.brand_style %} style="{{ product.brand_style }}"{% endif %}>
+        <div class="carousel-caption-box">
+          {% if product.logo %}
+            <img src="{{ product.logo }}" alt="{{ product.title }}" class="product-slide-logo">
+          {% else %}
+            <h2 class="display-4 fw-bold mb-0">{{ product.title }}</h2>
+          {% endif %}
+          {% if product.badge %}
+            <div class="mt-2"><span class="product-badge">{{ product.badge }}</span></div>
+          {% endif %}
+          {% if product.tagline %}
+            <p class="lead mt-3">{{ product.tagline }}</p>
+          {% endif %}
+          <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
+            <a class="{{ product.primary_btn_class | default: 'btn btn-light btn-lg' }}" href="{{ product.url }}">Learn more</a>
+          </div>
+        </div>
+        {% if product.brand_bar %}
+          <div class="product-brand-bar" style="{{ product.brand_bar }}"></div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#bpsHero" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bpsHero" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</section>
+
+<section class="position-relative overflow-hidden home-about d-flex align-items-center">
+  <img class="home-about-sketch" src="/images/ripcord-sketch.png" alt="" aria-hidden="true">
+  <div class="container position-relative py-5 w-100">
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="fw-bold">About Backup Parachute</h2>
+        <p class="text-muted mb-3">
+          Founded in 2012. Run by Kyle Miller, who has spent 27 years building and shipping software
+          for Fortune 500 companies, hedge funds, startups, and government agencies. We design, build,
+          and operate our own SaaS. Many of our products have been running for over a decade.
+        </p>
+        <a href="/about/" class="btn btn-outline-primary">More about BPS &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="billboard-view vh-billboard">
-  <div class="billboard-hero">
-    <img src="images/vh-billboard-hero.png" width="398" alt="VehicHaul mobile application for iOS and Android | A Product of Backup Parachute" />
-  </div>
-  <div class="billboard-msg">
-    <h4 class="billboard-subhead">A Product of Backup Parachute</h4>
-    <h1 class="billboard-tag">The simplified vehicle delivery system.</h1>
-    <a class="btn btn-ghost" href="http://vehichaul.com/" target="_blank">Learn More</a>
-  </div>
-</section>
-
-<section class="billboard-view cask-billboard">
-  <div class="billboard-hero">
-    <img src="images/cask-billboard-logo.png" width="500" alt="Cask - Discover the old, try the new | A Product of Backup Parachute" />
-  </div>
-  <div class="billboard-msg">
-    <h4 class="billboard-subhead">A Product of Backup Parachute</h4>
-    <h1 class="billboard-tag">Discover the old, try the new</h1>
-    <a class="btn btn-ghost" href="http://caskapp.com/" target="_blank">Learn More</a>
+<section class="bg-primary text-white py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">On demand CTO advice for startup founders.</h2>
+    <p class="lead mb-4">Get unstuck, stay on track, and make better technical decisions.</p>
+    <div class="d-flex gap-2 justify-content-center flex-wrap">
+      <a href="/products/cto-connect/" class="btn btn-light btn-lg">Learn more</a>
+      <a href="https://ctoconnect.io" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">Talk with a CTO</a>
+    </div>
   </div>
 </section>

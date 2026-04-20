@@ -1,20 +1,39 @@
 ---
 layout: master
 title: Articles
-navOrder: 2
+description: Writing on software, SaaS, and the tools we ship from Backup Parachute.
+permalink: /articles/
 ---
 
-<ul class="article-list">
-  {% for post in site.posts %}
-    <li class="article-preview">
-      <header>
-        <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <h4 class="article-date">{{ post.date | date: '%B %d, %Y' }}</h4>
-      </header>
-      <section>
-        <div class="article-blip">{{ post.excerpt | truncatewords: 50}}</div>
-        <a class="btn btn-ghost btn-small" href="{{ post.url }}">Read More</a>
-      </section>
-    </li>
-  {% endfor %}
-</ul>
+<section class="container py-5">
+  <header class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Articles</h1>
+    <p class="lead text-muted mb-0">Writing on software, SaaS, and the tools we ship.</p>
+  </header>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for post in site.posts %}
+      {%- assign is_crosspost = false -%}
+      {%- if post.canonical_url and post.canonical_url != post.url -%}
+        {%- assign is_crosspost = true -%}
+      {%- endif -%}
+      <div class="col">
+        <a href="{{ post.url }}" class="card card-soft h-100 text-decoration-none text-reset">
+          <div class="card-body d-flex flex-column">
+            <div class="small text-muted mb-2 d-flex gap-2 flex-wrap align-items-center">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time>
+              {% if is_crosspost %}
+                <span class="badge badge-crosspost">Crosspost</span>
+              {% endif %}
+            </div>
+            <h2 class="h5 fw-bold mb-2">{{ post.title }}</h2>
+            <p class="text-muted small mb-3">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+            <div class="mt-auto">
+              <span class="btn btn-outline-primary btn-sm">Read &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

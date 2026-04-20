@@ -1,0 +1,31 @@
+- name: Startup Metrics
+  url: https://backupparachute.com/startup-metrics/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: 10 metrics to align your team on shared goals. Built in calculators for runway, burn multiple, churn, LTV to CAC, and more.
+
+- name: Cashflow Calculator
+  url: https://backupparachute.com/cashflow-calculator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Calculate monthly cashflow, determine valuation multiples, and see yearly cash on cash return for small business purchases.
+
+- name: SDR Calculator
+  url: https://backupparachute.com/sdr-calculator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Model the compensation structure for Sales Development Reps based on metrics, costs, and sales figures.
+
+- name: Dev Release Calculator
+  url: https://backupparachute.com/dev-release-calculator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Calculate the average time between production deployments. How does your dev team stack up?
+
+- name: Tranche Calculator
+  url: https://backupparachute.com/tranche-calculator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Model the valuations offered across a multi tranche funding round.
+
+- name: Goal Tracker
+  url: https://backupparachute.com/goal-tracker/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: A simple twelve week goal tracker to help you change your habits and reach big goals.
+
+- name: Duration Calculator
+  url: https://backupparachute.com/duration-calculator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Lightweight duration calculator with split intervals. Perfect for mile times or timing batch jobs.
+
+- name: Basic Auth Generator
+  url: https://backupparachute.com/basic-auth-generator/?utm_source=backupparachute&utm_medium=tools_page&utm_campaign=calc&utm_content=listtextlink
+  description: Generate HTTP basic auth headers, create secure passwords, and decode Base64. All in the browser. No data leaves your device.

@@ -1,24 +1,75 @@
 ---
 layout: master
-displayTitle: Articles
 ---
 
-<article class="article">
-  <header>
-    <h1 class="article-title">{{ page.title }}</h1>
-    <h4 class="article-date">{{ page.date | date: '%B %d, %Y' }}</h4>
+{%- assign words = content | number_of_words -%}
+{%- assign read_time = words | divided_by: 200 | plus: 1 -%}
+{%- assign is_crosspost = false -%}
+{%- if page.canonical_url and page.canonical_url != page.url -%}
+  {%- assign is_crosspost = true -%}
+{%- endif -%}
+
+<article class="container py-5">
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb small">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/articles/">Articles</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title | truncate: 60 }}</li>
+    </ol>
+  </nav>
+
+  <header class="article-body mb-4">
+    <h1 class="display-5 fw-bold mb-3">{{ page.title }}</h1>
+    <div class="text-muted small d-flex flex-wrap gap-3 align-items-center">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      <span>&middot;</span>
+      <span>{{ read_time }} min read</span>
+      {% if is_crosspost %}
+        <span class="badge badge-crosspost">
+          Crossposted from <a class="text-white text-decoration-underline" href="{{ page.canonical_url }}" target="_blank" rel="noopener">source</a>
+        </span>
+      {% endif %}
+    </div>
   </header>
-  <section>
-    {{content}}
-  </section>
+
+  <div class="article-body">
+    {{ content }}
+  </div>
+
+  <nav class="article-body mt-5 pt-4 border-top d-flex justify-content-between" aria-label="Post navigation">
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url }}" class="btn btn-outline-primary">&larr; {{ page.previous.title | truncate: 30 }}</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url }}" class="btn btn-outline-primary">{{ page.next.title | truncate: 30 }} &rarr;</a>
+    {% endif %}
+  </nav>
 </article>
 
-<nav class="article-nav">
-  {% if page.previous.url %}
-  <a href="{{page.previous.url}}" class="btn btn-ghost">Previous</a>
-  {% endif %}
-
-  {% if page.next.url %}
-  <a href="{{page.next.url}}" class="btn btn-ghost">Next</a>
-  {% endif %}
-</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/images/bps-og-logo.png' | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.canonical_url | default: page.url | absolute_url }}"
+  }
+}
+</script>

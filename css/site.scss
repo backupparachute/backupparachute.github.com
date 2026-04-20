@@ -1,30 +1,5 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
+# Compiled by Jekyll into site.css
 ---
 
-@import 'libs/normalize-scss/normalize';
-
-// Bourbon & Neat
-@import 'libs/bourbon/app/assets/stylesheets/bourbon';
-@import 'libs/neat/app/assets/stylesheets/neat';
-@import '_sass/neat-settings';
-
-// Backup Parachute
-// ==========================================
-
-// Globals
-@import '_sass/globals/globals';
-
-// Layout
-@import '_sass/layout/layout';
-
-// Components
-@import '_sass/components/articles/articles';
-@import '_sass/components/billboards/billboards';
-@import '_sass/components/buttons/buttons';
-@import '_sass/components/contact/contact';
-@import '_sass/components/footer/footer';
-@import '_sass/components/grid-list/grid-list';
-@import '_sass/components/header/header';
-@import '_sass/components/nav/nav';
-@import '_sass/components/products/products';
+@import "theme";

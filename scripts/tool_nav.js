@@ -23,7 +23,7 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/contact?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="https://backupparachute.com/calculators?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">All Calculators</a>
+            <a class="nav-link" aria-current="page" href="https://backupparachute.com/tools/?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">All Tools</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/dev-release-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Dev Release Calculator</a>
@@ -53,18 +53,6 @@ const nav_html = `<nav class="navbar navbar-light bg-light">
             <a class="nav-link" aria-current="page" href="https://backupparachute.com/duration-calculator?utm_source=backupparachute&utm_medium=tools_nav&utm_campaign=${campaign}&utm_content=listtextlink">Duration Calculator</a>
           </li>
         </ul>
-        <!--
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        -->
-        <div class="">
-        	<a href="https://backupparachute.com/calculators?utm_source=backupparachute&utm_medium=ad-link&utm_campaign=${campaign}&utm_content=adtextlink">Get a custom app for your website today!</a>
-        			<div class="">
-        			<small><mark>Flat rate pricing, and a 100% money back guarantee!</mark></small>
-        			</div>
-        </div>
       </div>
     </div>
   </div>

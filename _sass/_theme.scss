@@ -1,0 +1,298 @@
+// Brand colors
+$bps-green: #839457;
+$bps-green-light: #9fab74;
+$bps-green-dark: #66733b;
+$bps-off-white: #fafaef;
+
+// Bootstrap variable overrides (must come before Bootstrap import if compiling Bootstrap from source)
+// When using Bootstrap from CDN, override CSS custom properties instead:
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #{$bps-green};
+  --bs-primary-rgb: 131, 148, 87;
+  --bs-link-color: #{$bps-green-dark};
+  --bs-link-color-rgb: 102, 115, 59;
+  --bs-link-hover-color: #{$bps-green};
+  --bs-link-hover-color-rgb: 131, 148, 87;
+  --bs-body-font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-body-bg: #{$bps-off-white};
+  --bs-border-color: #e5e7eb;
+}
+
+// Button primary overrides (Bootstrap uses hardcoded primary in .btn-primary)
+.btn-primary {
+  --bs-btn-bg: #{$bps-green};
+  --bs-btn-border-color: #{$bps-green};
+  --bs-btn-hover-bg: #{$bps-green-dark};
+  --bs-btn-hover-border-color: #{$bps-green-dark};
+  --bs-btn-active-bg: #{$bps-green-dark};
+  --bs-btn-active-border-color: #{$bps-green-dark};
+  --bs-btn-disabled-bg: #{$bps-green};
+  --bs-btn-disabled-border-color: #{$bps-green};
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #{$bps-green-dark};
+  --bs-btn-border-color: #{$bps-green};
+  --bs-btn-hover-bg: #{$bps-green};
+  --bs-btn-hover-border-color: #{$bps-green};
+  --bs-btn-active-bg: #{$bps-green-dark};
+  --bs-btn-active-border-color: #{$bps-green-dark};
+}
+
+.bg-primary {
+  background-color: $bps-green !important;
+}
+
+.text-primary {
+  color: $bps-green-dark !important;
+}
+
+// Brand utility: inverted hero band
+.bg-brand-dark {
+  background-color: $bps-green-dark;
+  color: #fff;
+}
+
+.bg-brand {
+  background-color: $bps-green;
+  color: #fff;
+}
+
+// Navbar tweaks
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  color: $bps-green-dark;
+
+  &:hover,
+  &:focus {
+    color: $bps-green;
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+    fill: $bps-green;
+  }
+}
+
+// Hero carousel
+.hero-carousel {
+  .carousel-item {
+    background-color: $bps-green-dark;
+    color: #fff;
+  }
+
+  .carousel-caption-box {
+    min-height: 520px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: -.02em;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+  }
+
+  .lead {
+    opacity: .9;
+  }
+
+  .ripcord-mark {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    opacity: .85;
+    fill: #fff;
+  }
+}
+
+// Product hero band
+.product-hero {
+  background-color: $bps-green;
+  color: #fff;
+  padding: 4rem 0 5rem;
+  position: relative;
+}
+
+.product-hero .product-brand-bar,
+.hero-carousel .carousel-item .product-brand-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  z-index: 2;
+}
+
+.hero-carousel .carousel-item {
+  position: relative;
+}
+
+.product-hero h1 {
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.product-hero .product-logo {
+  max-height: 80px;
+  margin-bottom: 1.25rem;
+}
+
+// Cards for product/article grids
+.card-soft {
+  border: 1px solid var(--bs-border-color);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.card-soft:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
+  transform: translateY(-2px);
+}
+
+// Article body
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.article-body h2,
+.article-body h3 {
+  margin-top: 2rem;
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+// Footer
+.site-footer {
+  background-color: #fff;
+  border-top: 1px solid var(--bs-border-color);
+  padding: 3rem 0 2rem;
+  color: var(--bs-secondary-color);
+}
+
+.site-footer a {
+  color: $bps-green-dark;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: $bps-green;
+}
+
+.site-footer .social-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: $bps-green-dark;
+  margin-right: .75rem;
+}
+
+// Home "About" section: zoomed ripcord sketch bleeds to section edges, lightened
+.home-about {
+  min-height: 460px;
+}
+
+.home-about-sketch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 46%;
+  max-width: 560px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: .28;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+@media (max-width: 767.98px) {
+  .home-about-sketch {
+    width: 55%;
+    opacity: .18;
+  }
+}
+
+// Per-product hero carousel slides
+.hero-carousel .product-slide-logo {
+  max-height: 110px;
+  max-width: 70%;
+  height: auto;
+  width: auto;
+}
+
+// "BETA" / "ALPHA" status badge
+.product-badge {
+  display: inline-block;
+  font-family: inherit;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  line-height: 1;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.12);
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.product-badge-sm {
+  font-size: .6rem;
+  padding: .2rem .45rem;
+  border-width: 1px;
+  border-color: var(--bs-border-color);
+  background: transparent;
+  color: var(--bs-secondary-color);
+}
+
+// Sticky-footer layout: push footer to viewport bottom on short pages.
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+body > .site-footer {
+  flex-shrink: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-body-font-family);
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+// Cross-post badge
+.badge-crosspost {
+  background-color: $bps-green-light;
+  color: #fff;
+}

@@ -1,7 +1,7 @@
 title: Backup Parachute Software
-description: We leverage open source software to craft solutions that empower our clients to reach the next level.
+description: A portfolio of software built to last by a SaaS operator with 27 years of experience. Products, tools, and articles from the Backup Parachute team.
 url: https://backupparachute.com
-twitter: https://twitter.com/backupparachute
+author: Kyle Miller
 linkedin: https://www.linkedin.com/company/backup-parachute-software
 github: https://github.com/backupparachute/
 email: info@backupparachute.com
@@ -9,25 +9,44 @@ phone: 888-865-2012
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
 
-# Outputting
-permalink: pretty
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "libs/**"
+    values:
+      sitemap: false
+
+permalink: /articles/:title/
 
 exclude:
-- bower.json
-- README.md
-- node_modules
-- gulpfile.js
-- package.json
-- raw_assets
+  - bower.json
+  - README.md
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - raw_assets
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 
 sass:
   style: compressed
-  sass_dir: /
-
-defaults:
-  -
-    scope:
-      path:            "libs/**"
-    values:
-      sitemap:         false
+  sass_dir: _sass
