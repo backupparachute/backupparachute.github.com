@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-5">
+    <div class="row g-4 align-items-start justify-content-between">
+      <div class="col-lg-4">
         <a class="navbar-brand" href="/">
           <svg aria-hidden="true"><use xlink:href="#ripcord"></use></svg>
           <span>Backup Parachute <span class="fw-light">Software</span></span>
@@ -11,17 +11,27 @@
         </p>
       </div>
 
-      <div class="col-lg-5 text-lg-center">
+      <div class="col-6 col-lg-1">
         <h6 class="text-uppercase small fw-bold">Explore</h6>
-        <ul class="list-inline mb-0 d-flex flex-wrap justify-content-lg-center column-gap-3 row-gap-2">
-          <li class="list-inline-item"><a href="/products/">Products</a></li>
-          <li class="list-inline-item"><a href="/articles/">Articles</a></li>
-          <li class="list-inline-item"><a href="/tools/">Free tools</a></li>
-          <li class="list-inline-item"><a href="/about/">About</a></li>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="/tools/">Free tools</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
 
-      <div class="col-lg-2 text-lg-end">
+      <div class="col-6 col-lg-1">
+        <h6 class="text-uppercase small fw-bold">Products</h6>
+        <ul class="list-unstyled mb-0">
+          {% assign footer_products = site.products | sort: "order" %}
+          {% for product in footer_products %}
+            <li><a href="{{ product.url }}">{{ product.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-lg-1 text-lg-end">
         <h6 class="text-uppercase small fw-bold">Connect</h6>
         <div class="social-icons">
           <a href="/contact/" aria-label="Email">
