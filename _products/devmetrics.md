@@ -4,6 +4,7 @@ tagline: Opinionated takes on dev teams and how they should operate.
 description: DevMetrics is a collection of browser based calculators and essays on the dev team metrics that actually matter. Deployment frequency, lead time, change failure rate, PR size.
 logo: /images/product_logo_devmetrics.svg
 card_logo: /images/product_logo_devmetrics-dark.svg
+hero_logo_style: "width: 420px; max-width: 85%; height: auto;"
 brand_style: "background: linear-gradient(135deg, #0f172a 0%, #0f172a 60%, #22d3ee 120%);"
 order: 6
 category: BusinessApplication

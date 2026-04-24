@@ -17,7 +17,7 @@ description: A portfolio of software built to last. SaaS products, calculators, 
       <div class="carousel-item{% if forloop.first %} active{% endif %}"{% if product.brand_style %} style="{{ product.brand_style }}"{% endif %}>
         <div class="carousel-caption-box">
           {% if product.logo %}
-            <img src="{{ product.logo }}" alt="{{ product.title }}" class="product-slide-logo">
+            <img src="{{ product.logo }}" alt="{{ product.title }}" class="product-slide-logo"{% if product.hero_logo_style %} style="{{ product.hero_logo_style }}"{% endif %}>
           {% else %}
             <h2 class="display-4 fw-bold mb-0">{{ product.title }}</h2>
           {% endif %}
