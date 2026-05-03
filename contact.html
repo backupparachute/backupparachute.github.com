@@ -15,17 +15,17 @@ scripts:
     <p class="text-muted">
       Have a product question, a partnership idea, or just want to say hi? Drop us a line.
       If you're looking for technical advisory or fractional CTO help, head over to
-      <a href="https://ctoconnect.io">CTO Connect</a>.
+      <a href="https://ctoconnect.io" target="_blank" rel="noopener" onclick="if(window.fathom) fathom.trackEvent('Conversion: CTO Connect (contact)');">CTO Connect</a>.
     </p>
 
     <ul class="list-unstyled mt-4">
       <li class="mb-2">
         <svg style="width:18px;height:18px;fill:currentColor;vertical-align:-3px;margin-right:.5rem;"><use xlink:href="#email"></use></svg>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="mailto:{{ site.email }}" onclick="if(window.fathom) fathom.trackEvent('Contact: Email click');">{{ site.email }}</a>
       </li>
       <li class="mb-2">
         <svg style="width:18px;height:18px;fill:currentColor;vertical-align:-3px;margin-right:.5rem;"><use xlink:href="#phone"></use></svg>
-        {{ site.phone }}
+        <a href="tel:{{ site.phone }}" onclick="if(window.fathom) fathom.trackEvent('Contact: Phone click');">{{ site.phone }}</a>
       </li>
     </ul>
   </div>

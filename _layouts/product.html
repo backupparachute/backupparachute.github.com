@@ -9,7 +9,7 @@ layout: master
   <header class="product-hero"{% if page.brand_style %} style="{{ page.brand_style }}"{% endif %}>
     <div class="container text-center">
       {% if page.logo %}
-        <img class="product-logo" src="{{ page.logo }}" alt="{{ page.title }} logo">
+        <img class="product-logo" src="{{ page.logo }}" alt="{{ page.title }} logo"{% if page.hero_logo_style %} style="{{ page.hero_logo_style }}"{% endif %}>
       {% else %}
         <h1>{{ page.title }}</h1>
       {% endif %}
@@ -21,12 +21,18 @@ layout: master
       {% endif %}
       <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
         {% if page.primary_cta_url %}
-          <a class="{{ hero_btn_primary }}" href="{{ page.primary_cta_url }}" {% if page.primary_cta_url contains '://' %}target="_blank" rel="noopener"{% endif %}>
+          {%- assign primary_is_external = false -%}
+          {%- if page.primary_cta_url contains '://' -%}{%- assign primary_is_external = true -%}{%- endif -%}
+          <a class="{{ hero_btn_primary }}" href="{{ page.primary_cta_url }}" {% if primary_is_external %}target="_blank" rel="noopener"{% endif %}
+             onclick="if(window.fathom) fathom.trackEvent('{% if primary_is_external %}Conversion: {{ page.title }} (hero){% else %}Product CTA: {{ page.title }} primary{% endif %}');">
             {{ page.primary_cta_label | default: "Visit site" }}
           </a>
         {% endif %}
         {% if page.secondary_cta_url %}
-          <a class="{{ hero_btn_secondary }}" href="{{ page.secondary_cta_url }}">
+          {%- assign secondary_is_external = false -%}
+          {%- if page.secondary_cta_url contains '://' -%}{%- assign secondary_is_external = true -%}{%- endif -%}
+          <a class="{{ hero_btn_secondary }}" href="{{ page.secondary_cta_url }}" {% if secondary_is_external %}target="_blank" rel="noopener"{% endif %}
+             onclick="if(window.fathom) fathom.trackEvent('{% if secondary_is_external %}Conversion: {{ page.title }} (hero secondary){% else %}Product CTA: {{ page.title }} secondary{% endif %}');">
             {{ page.secondary_cta_label | default: "Learn more" }}
           </a>
         {% endif %}
@@ -70,7 +76,10 @@ layout: master
         {% if page.cta_subheading %}
           <p class="lead mb-4">{{ page.cta_subheading }}</p>
         {% endif %}
-        <a class="btn btn-light btn-lg" href="{{ page.cta_url }}" {% if page.cta_url contains '://' %}target="_blank" rel="noopener"{% endif %}>
+        {%- assign bottom_cta_is_external = false -%}
+        {%- if page.cta_url contains '://' -%}{%- assign bottom_cta_is_external = true -%}{%- endif -%}
+        <a class="btn btn-light btn-lg" href="{{ page.cta_url }}" {% if bottom_cta_is_external %}target="_blank" rel="noopener"{% endif %}
+           onclick="if(window.fathom) fathom.trackEvent('{% if bottom_cta_is_external %}Conversion: {{ page.title }} (bottom){% else %}Product CTA: {{ page.title }} bottom{% endif %}');">
           {{ page.cta_label | default: "Get started" }}
         </a>
       </div>

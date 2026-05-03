@@ -36,6 +36,7 @@ $form.validate({
     // }).fail(function() {
         // $(form).append('<h6 class="contact-msg contact-msg-error">An error occurred. Please try again.</h6>');
     }).always(function() {
+        if (window.fathom) { fathom.trackEvent('Contact: Form submit'); }
         $(form).append('<h6 class="contact-msg contact-msg-success">Thank you! We\'ll be in touch soon.</h6>');
         form.reset();
     });
